@@ -19,4 +19,5 @@ The steps I noticed: - The farmer Used JCB to take out the massive weeds
 - Womenfolk Planted the banana stems வாழ தண்டு of 4 to 6 inches at intervals
 - Then Fertilizing & Pesticiding
 
-Why isn't the organic farming techniques espoused by Nammalvar practised here?
+Why isn't the organic farming techniques espoused by Nammalvar practised here? 
+Maybe they find them unviable cost wise and hence use chemical based ones
