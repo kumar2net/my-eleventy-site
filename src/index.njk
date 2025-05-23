@@ -1,0 +1,58 @@
+---
+layout: base.njk
+title: Home
+---
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Welcome to My Personal Website</h1>
+        <p class="hero-text">Hi, I'm [Your Name]. I'm a software developer passionate about creating elegant solutions to complex problems.</p>
+        <div class="hero-buttons">
+            <a href="/about" class="button primary">Learn More</a>
+            <a href="/contact" class="button secondary">Get in Touch</a>
+        </div>
+    </div>
+</section>
+
+<section class="featured-projects">
+    <h2>Featured Projects</h2>
+    <div class="project-grid">
+        <div class="project-card">
+            <h3>Project 1</h3>
+            <p>Description of your first amazing project goes here. What problems did it solve?</p>
+            <a href="/projects/project-1" class="read-more">Read More →</a>
+        </div>
+        <div class="project-card">
+            <h3>Project 2</h3>
+            <p>Description of your second fantastic project. What technologies did you use?</p>
+            <a href="/projects/project-2" class="read-more">Read More →</a>
+        </div>
+        <div class="project-card">
+            <h3>Project 3</h3>
+            <p>Your third project showcase. What makes this one special?</p>
+            <a href="/projects/project-3" class="read-more">Read More →</a>
+        </div>
+    </div>
+</section>
+
+<section class="latest-posts">
+    <h2>Latest Blog Posts</h2>
+    <div class="post-grid">
+        {%- for post in collections.posts | reverse -%}
+        {% if loop.index0 < 3 %}
+        <article class="post-card">
+            <h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+            <time datetime="{{ post.date | dateIso }}">{{ post.date | dateReadable }}</time>
+            <p>{{ post.data.description }}</p>
+            <a href="{{ post.url }}" class="read-more">Read More →</a>
+        </article>
+        {% endif %}
+        {%- endfor -%}
+    </div>
+</section>
+
+<section class="cta">
+    <h2>Let's Work Together</h2>
+    <p>I'm always interested in hearing about new projects and opportunities.</p>
+    <a href="/contact" class="button primary">Get in Touch</a>
+</section> 
