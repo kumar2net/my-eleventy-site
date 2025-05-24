@@ -1,0 +1,11 @@
+{
+    "title": "My Blog",
+    "url": "https://example.com",
+    "description": "A blog about technology, programming, and web development",
+    "language": "en",
+    "author": {
+        "name": "Your Name",
+        "email": "your.email@example.com"
+    },
+    "image": "/assets/default-social-image.jpg"
+} 

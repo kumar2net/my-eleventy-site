@@ -1,0 +1,54 @@
+---
+layout: base.njk
+title: Tags
+---
+
+<h1>Tags</h1>
+
+<div class="tags-list">
+    {% for tag in collections.tagList %}
+        <section class="tag-section">
+            <h2 id="{{ tag }}">#{{ tag }}</h2>
+            <ul>
+                {% set taglist = collections[tag] %}
+                {% for post in taglist | reverse %}
+                    <li>
+                        <a href="{{ post.url }}">{{ post.data.title }}</a>
+                        <span class="post-date">{{ post.date | dateReadable }}</span>
+                    </li>
+                {% endfor %}
+            </ul>
+        </section>
+    {% endfor %}
+</div>
+
+<style>
+    .tags-list {
+        margin-top: 2rem;
+    }
+    
+    .tag-section {
+        margin-bottom: 2rem;
+    }
+    
+    .tag-section h2 {
+        color: var(--link-color);
+        border-bottom: 1px solid var(--border-color);
+        padding-bottom: 0.5rem;
+    }
+    
+    .tag-section ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .tag-section li {
+        margin: 1rem 0;
+    }
+    
+    .post-date {
+        color: var(--text-muted);
+        font-size: 0.9rem;
+        margin-left: 1rem;
+    }
+</style> 

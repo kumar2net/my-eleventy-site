@@ -1,57 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="{{ description | default('My personal website and blog') }}">
-    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#1a1a1a" media="(prefers-color-scheme: dark)">
-    <title>{{ title | default('My Personal Website') }}</title>
+    <title>{{ title }} | My Site</title>
+    
+    {# Meta tags for SEO #}
+    <meta name="description" content="{{ description or metadata.description }}">
+    <meta property="og:title" content="{{ title }} | My Site">
+    <meta property="og:description" content="{{ description or metadata.description }}">
+    <meta property="og:image" content="{{ metadata.url }}{{ image or metadata.image }}">
+    <meta property="og:url" content="{{ metadata.url }}{{ page.url }}">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    {# RSS Feed #}
+    <link rel="alternate" href="/feed.xml" type="application/atom+xml" title="RSS Feed">
+    
+    {# Styles #}
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/responsive.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/prism-theme.css">
+    
+    {# Scripts #}
+    <script src="https://cdn.jsdelivr.net/npm/elasticlunr@0.9.5/elasticlunr.min.js" defer></script>
+    <script src="/js/search.js" defer></script>
+    <script src="/js/theme.js" defer></script>
 </head>
 <body>
-    <header class="site-header">
-        <nav class="nav-container">
-            <a href="/" class="site-title">{{ site.title | default('My Website') }}</a>
-            <button class="mobile-menu-toggle" aria-label="Toggle menu">
-                <span class="hamburger"></span>
+    <header>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/blog">Blog</a>
+            <a href="/tags">Tags</a>
+            
+            {# Dark mode toggle #}
+            <button id="theme-toggle" aria-label="Toggle dark mode">
+                🌓
             </button>
-            <ul class="nav-links">
-                <li><a href="/">Home</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/blog">Blog</a></li>
-                <li><a href="/projects">Projects</a></li>
-                <li><a href="/contact">Contact</a></li>
-            </ul>
+            
+            {# Search bar #}
+            <div class="search-container">
+                <input type="search" id="search-input" placeholder="Search...">
+                <div id="search-results"></div>
+            </div>
         </nav>
     </header>
 
-    <main class="content container">
+    <main>
         {{ content | safe }}
     </main>
 
-    <footer class="site-footer">
-        <div class="footer-content container">
-            <p>&copy; {{ page.date.getFullYear() }} {{ site.author | default('Your Name') }}. All rights reserved.</p>
-            <div class="social-links">
-                <a href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a>
-                <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener">LinkedIn</a>
-                <a href="https://twitter.com/yourusername" target="_blank" rel="noopener">Twitter</a>
-            </div>
-        </div>
+    <footer>
+        <p>&copy; {% currentYear %} My Site. All rights reserved.</p>
     </footer>
-
-    <script>
-        // Mobile menu toggle
-        document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
-            document.querySelector('.nav-links').classList.toggle('active');
-            this.classList.toggle('active');
-        });
-    </script>
 </body>
 </html>
 

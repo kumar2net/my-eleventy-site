@@ -1,19 +1,122 @@
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const pluginRss = require("@11ty/eleventy-plugin-rss");
+const { DateTime } = require("luxon");
+const Image = require("@11ty/eleventy-img");
+const readingTime = require('reading-time');
+const elasticlunr = require("elasticlunr");
+const fs = require("fs");
+const path = require("path");
+
+// Image shortcode
+async function imageShortcode(src, alt, sizes = "100vw") {
+    if (!src) {
+        throw new Error(`Missing \`src\` on image`);
+    }
+    if (!alt) {
+        throw new Error(`Missing \`alt\` on image`);
+    }
+
+    let metadata = await Image(src, {
+        widths: [300, 600, 900],
+        formats: ["avif", "jpeg"],
+        outputDir: "./_site/img/"
+    });
+
+    let imageAttributes = {
+        alt,
+        sizes,
+        loading: "lazy",
+        decoding: "async",
+    };
+
+    return Image.generateHTML(metadata, imageAttributes);
+}
+
 module.exports = function(eleventyConfig) {
+    // Plugins
+    eleventyConfig.addPlugin(syntaxHighlight);
+    eleventyConfig.addPlugin(pluginRss);
+
     // Pass through copy for assets
     eleventyConfig.addPassthroughCopy("src/assets");
     eleventyConfig.addPassthroughCopy("src/css");
+    eleventyConfig.addPassthroughCopy("src/js");
+
+    // Image shortcode
+    eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
+    eleventyConfig.addLiquidShortcode("image", imageShortcode);
+    eleventyConfig.addJavaScriptFunction("image", imageShortcode);
 
     // Date filters
     eleventyConfig.addFilter("dateIso", date => {
-        return date.toISOString();
+        return DateTime.fromJSDate(date).toISO();
     });
 
     eleventyConfig.addFilter("dateReadable", date => {
-        return date.toLocaleDateString('en-US', {
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric'
+        return DateTime.fromJSDate(date).toLocaleString(DateTime.DATE_FULL);
+    });
+
+    // Reading time filter
+    eleventyConfig.addFilter("readingTime", text => {
+        const stats = readingTime(text);
+        return Math.ceil(stats.minutes);
+    });
+
+    // Get collection items by tag
+    eleventyConfig.addFilter("filterByTag", (posts, tag) => {
+        return posts.filter(post => post.data.tags && post.data.tags.includes(tag));
+    });
+
+    // Create a collection of all tags
+    eleventyConfig.addCollection("tagList", function(collection) {
+        const tagSet = new Set();
+        collection.getAll().forEach(item => {
+            if (item.data.tags) {
+                item.data.tags.forEach(tag => tagSet.add(tag));
+            }
         });
+        return Array.from(tagSet).sort();
+    });
+
+    // Add currentYear shortcode
+    eleventyConfig.addShortcode("currentYear", () => {
+        return new Date().getFullYear();
+    });
+
+    // Generate search index
+    eleventyConfig.addCollection("searchIndex", async function(collection) {
+        // Create the index
+        const index = elasticlunr(function() {
+            this.addField("title");
+            this.addField("content");
+            this.addField("tags");
+            this.setRef("url");
+        });
+
+        // Add documents to the index
+        for (const page of collection.getAll()) {
+            if (page.url && page.template?.inputPath?.endsWith('.md')) {
+                // Read the raw content
+                const content = await page.template.read();
+                
+                const doc = {
+                    url: page.url,
+                    title: page.data.title,
+                    content: content,
+                    tags: page.data.tags ? page.data.tags.join(' ') : ''
+                };
+                index.addDoc(doc);
+            }
+        }
+
+        // Write the index to a file
+        const outputDir = path.join(__dirname, "_site");
+        if (!fs.existsSync(outputDir)) {
+            fs.mkdirSync(outputDir, { recursive: true });
+        }
+        fs.writeFileSync(path.join(outputDir, "search-index.json"), JSON.stringify(index));
+
+        return index;
     });
 
     // Base Config

@@ -12,7 +12,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy": "^3.1.0",
     "he": "^1.2.0",
     "markdown-it": "^13.0.1",
     "mkdirp": "^3.0.1",
@@ -22,6 +22,9 @@
     "xml2js": "^0.6.2"
   },
   "dependencies": {
+    "@11ty/eleventy-img": "^6.0.4",
+    "@11ty/eleventy-plugin-rss": "^2.0.4",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.1",
     "a-sync-waterfall": "^1.0.1",
     "acorn": "^7.4.1",
     "ansi-styles": "^4.3.0",
@@ -65,6 +68,7 @@
     "dunder-proto": "^1.0.1",
     "ee-first": "^1.1.1",
     "ejs": "^3.1.10",
+    "elasticlunr": "^0.9.5",
     "encodeurl": "^2.0.0",
     "entities": "^3.0.1",
     "errno": "^0.1.8",
@@ -175,6 +179,7 @@
     "pug-walk": "^2.0.0",
     "queue-microtask": "^1.2.3",
     "readdirp": "^3.6.0",
+    "reading-time": "^1.5.0",
     "recursive-copy": "^2.0.14",
     "resolve": "^1.22.10",
     "reusify": "^1.1.0",
