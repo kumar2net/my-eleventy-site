@@ -16,9 +16,6 @@ async function tryDownloadImage(originalUrl, filename) {
   const urls = [
     originalUrl,
     originalUrl.replace('http://', 'https://'),
-    // Try WordPress.com URL variations
-    originalUrl.replace('http://kumar2net.wordpress.com/', 'https://kumar2net.files.wordpress.com/'),
-    originalUrl.replace('http://kumar2net.wordpress.com/wp-content/', 'https://kumar2net.files.wordpress.com/'),
   ];
 
   for (const url of urls) {
@@ -75,24 +72,41 @@ function downloadImage(url, filename) {
 
 // Function to extract image URLs and their context from markdown content
 function extractImageUrls(content) {
-  // First, look for reference-style image links
-  const refStyleRegex = /!\[([^\]]*)\]\[([^\]]+)\]\n\n\[([^\]]+)\]: ([^\s]+)(?:\s+"([^"]+)")?\n?/g;
   const images = [];
   let match;
 
+  // Regex for reference-style image links, capturing optional surrounding HTML comments
+  // Example: <!-- ![alt text][ref] -->
+  //          <!-- [ref]: url "title" -->
+  const refStyleRegex = /(?:<!--\s*)?!\[([^\]]*)\]\[([^\]]+)\](?:\s*-->)?\s*\n\s*(?:<!--\s*)?\[\2\]:\s*([^\s]+)(?:\s+"([^"]+)")?(?:\s*-->)?\n?/g;
   while ((match = refStyleRegex.exec(content)) !== null) {
-    const [fullMatch, alt, id, _, url, title] = match;
-    if (url.startsWith('http:')) {
-      images.push({ fullMatch, alt, url, title, type: 'reference' });
+    const [fullMatch, alt, id, url, title] = match;
+    if (url.startsWith('http:') || url.startsWith('https:')) {
+      images.push({
+        fullMatch,
+        alt: alt || '',
+        url,
+        title: title || '',
+        type: 'reference',
+        isCommented: fullMatch.startsWith('<!--')
+      });
     }
   }
 
-  // Then look for inline image links
-  const inlineRegex = /!\[([^\]]*)\]\(([^)]+)(?:\s+"([^"]+)")?\)/g;
+  // Regex for inline image links, capturing optional surrounding HTML comments
+  // Example: <!-- ![alt text](url "title") -->
+  const inlineRegex = /(?:<!--\s*)?!\[([^\]]*)\]\(([^)]+)(?:\s+"([^"]+)")?\)(?:\s*-->)?/g;
   while ((match = inlineRegex.exec(content)) !== null) {
     const [fullMatch, alt, url, title] = match;
-    if (url.startsWith('http:')) {
-      images.push({ fullMatch, alt, url, title, type: 'inline' });
+    if (url.startsWith('http:') || url.startsWith('https:')) {
+      images.push({
+        fullMatch,
+        alt: alt || '',
+        url,
+        title: title || '',
+        type: 'inline',
+        isCommented: fullMatch.startsWith('<!--')
+      });
     }
   }
 
@@ -122,6 +136,7 @@ async function fixImageUrls() {
     let totalImages = 0;
     let successfulDownloads = 0;
     let failedDownloads = 0;
+    let localRelinks = 0;
     
     for (const file of files) {
       if (!file.endsWith('.md')) continue;
@@ -141,29 +156,29 @@ async function fixImageUrls() {
       let updatedContent = content;
 
       for (const image of images) {
-        const imageFilename = createImageFilename(image.url, postSlug);
-        const imagePath = path.join(imagesDir, imageFilename);
-        const relativeImagePath = `/assets/images/${imageFilename}`;
+        const originalFilenameFromUrl = path.basename(image.url.split('?')[0]);
+        const localImagePath = path.join(imagesDir, originalFilenameFromUrl);
 
-        // Try to download the image
-        const success = await tryDownloadImage(image.url, imagePath);
-        
-        if (success) {
-          // Replace the image URL in the content
-          updatedContent = updatedContent.replace(
-            image.fullMatch,
-            `![${image.alt}](${relativeImagePath})`
-          );
-          console.log(`Updated image: ${image.url} -> ${relativeImagePath}`);
-          successfulDownloads++;
+        if (fs.existsSync(localImagePath)) {
+          console.log(`Found local image for ${image.url}: ${originalFilenameFromUrl}`);
+          const newImageMarkdown = `![${image.alt || ''}](${'/assets/images/' + originalFilenameFromUrl})`;
+          updatedContent = updatedContent.replace(image.fullMatch, newImageMarkdown);
+          localRelinks++;
         } else {
-          // Replace the broken image with a note
-          updatedContent = updatedContent.replace(
-            image.fullMatch,
-            createImageRemovalNote(image)
-          );
-          console.log(`Removed broken image: ${image.url}`);
-          failedDownloads++;
+          const imageFilenameForDownload = createImageFilename(image.url, postSlug);
+          const imagePathToDownloadTo = path.join(imagesDir, imageFilenameForDownload);
+          const success = await tryDownloadImage(image.url, imagePathToDownloadTo);
+
+          if (success) {
+            const newImageMarkdown = `![${image.alt || ''}](${'/assets/images/' + imageFilenameForDownload})`;
+            updatedContent = updatedContent.replace(image.fullMatch, newImageMarkdown);
+            console.log(`Updated image: ${image.url} -> ${'/assets/images/' + imageFilenameForDownload}`);
+            successfulDownloads++;
+          } else {
+            updatedContent = updatedContent.replace(image.fullMatch, createImageRemovalNote(image));
+            console.log(`Removed broken image: ${image.url}`);
+            failedDownloads++;
+          }
         }
       }
 
@@ -176,6 +191,7 @@ async function fixImageUrls() {
 
     console.log('\nSummary:');
     console.log(`Total images processed: ${totalImages}`);
+    console.log(`Successfully relinked local: ${localRelinks}`);
     console.log(`Successfully downloaded: ${successfulDownloads}`);
     console.log(`Removed broken images: ${failedDownloads}`);
   } catch (error) {

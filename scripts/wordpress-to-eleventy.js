@@ -146,21 +146,31 @@ async function processImages(markdown, postSlug) {
     try {
       // Generate filename from URL
       const urlParts = image.url.split('/');
-      const originalFilename = urlParts[urlParts.length - 1].split('?')[0];
-      const ext = path.extname(originalFilename) || '.jpg';
-      const imageFilename = `${postSlug}-${image.id.substring(0, 8)}${ext}`;
-      const imagePath = path.join(imagesDir, imageFilename);
-      const relativeImagePath = `/assets/images/${imageFilename}`;
+      const originalFilenameFromUrl = urlParts[urlParts.length - 1].split('?')[0];
+      const localImagePath = path.join(imagesDir, originalFilenameFromUrl);
 
-      // Download image
-      await downloadImage(image.url, imagePath);
-      console.log(`Downloaded image: ${imageFilename}`);
+      if (fs.existsSync(localImagePath)) {
+        console.log(`Found local image: ${originalFilenameFromUrl}`);
+        processedMarkdown = processedMarkdown.replace(
+          image.fullMatch,
+          `![${image.alt}](/assets/images/${originalFilenameFromUrl})`
+        );
+      } else {
+        const ext = path.extname(originalFilenameFromUrl) || '.jpg';
+        const imageFilename = `${postSlug}-${image.id.substring(0, 8)}${ext}`;
+        const downloadPath = path.join(imagesDir, imageFilename);
+        const relativeImagePathForDownload = `/assets/images/${imageFilename}`;
 
-      // Replace in markdown
-      processedMarkdown = processedMarkdown.replace(
-        image.fullMatch,
-        `![${image.alt}](${relativeImagePath})`
-      );
+        // Download image
+        await downloadImage(image.url, downloadPath);
+        console.log(`Downloaded image: ${imageFilename}`);
+
+        // Replace in markdown
+        processedMarkdown = processedMarkdown.replace(
+          image.fullMatch,
+          `![${image.alt}](${relativeImagePathForDownload})`
+        );
+      }
     } catch (error) {
       console.error(`Failed to process image ${image.url}:`, error.message);
       // Keep original URL if download fails
