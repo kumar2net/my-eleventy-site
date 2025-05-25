@@ -144,7 +144,8 @@ module.exports = function(eleventyConfig) {
             fs.mkdirSync(outputDir, { recursive: true });
         }
         
-        const indexJson = JSON.stringify(index);
+        // Serialize the index to JSON
+        const indexJson = JSON.stringify(index.toJSON());
         fs.writeFileSync(path.join(outputDir, "search-index.json"), indexJson);
         console.log('Search index generated successfully');
 

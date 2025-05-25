@@ -1,230 +1,113 @@
 // Search functionality
+console.log('Search script loaded');
+
+// Wait for DOM to be ready
 document.addEventListener('DOMContentLoaded', () => {
+    console.log('DOM loaded');
+    
+    // Check if elasticlunr is available
+    if (typeof elasticlunr === 'undefined') {
+        console.error('elasticlunr is not loaded!');
+        return;
+    }
+    console.log('elasticlunr is available');
+
     const searchInput = document.getElementById('search-input');
     const searchResults = document.getElementById('search-results');
     let searchIndex = null;
-    let searchTimeout = null;
-    let lastQuery = '';
-    let isSearching = false;
 
-    // Load the search index
+    if (!searchInput || !searchResults) {
+        console.error('Search elements not found:', {
+            searchInput: !!searchInput,
+            searchResults: !!searchResults
+        });
+        return;
+    }
+    console.log('Search elements found');
+
+    // Load search index
+    console.log('Fetching search index...');
     fetch('/search-index.json')
         .then(response => {
+            console.log('Search index response status:', response.status);
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
             return response.json();
         })
         .then(data => {
-            if (!data || typeof data !== 'object') {
+            console.log('Search index data received:', data);
+            if (!data) {
                 throw new Error('Invalid search index data');
             }
-            try {
-                // Load index in a separate task to prevent blocking
-                setTimeout(() => {
-                    searchIndex = elasticlunr.Index.load(data);
-                    console.log('Search index loaded successfully');
-                    
-                    if (searchInput) {
-                        searchInput.disabled = false;
-                        searchInput.placeholder = 'Search...';
-                    }
-                }, 0);
-            } catch (error) {
-                console.error('Error loading search index:', error);
-                throw error;
+            searchIndex = elasticlunr.Index.load(data);
+            console.log('Search index loaded successfully');
+            
+            if (searchInput) {
+                searchInput.disabled = false;
+                searchInput.placeholder = 'Search...';
             }
         })
         .catch(error => {
             console.error('Error loading search index:', error);
-            if (searchInput) {
-                searchInput.placeholder = 'Search unavailable';
-                searchInput.disabled = true;
-            }
-            if (searchResults) {
-                searchResults.innerHTML = '<p>Search is currently unavailable</p>';
-            }
+            searchResults.innerHTML = '<div class="search-error">Error loading search index</div>';
         });
 
-    // Function to get suggestions with performance optimization
-    const getSuggestions = (query) => {
-        if (!searchIndex || !query || isSearching) return [];
+    // Handle search input
+    searchInput.addEventListener('input', (e) => {
+        console.log('Search input event:', e.target.value);
+        const query = e.target.value.trim();
         
-        try {
-            const results = searchIndex.search(query, {
-                fields: {
-                    title: {boost: 3},
-                    description: {boost: 2},
-                    content: {boost: 1},
-                    tags: {boost: 2},
-                    excerpt: {boost: 1.5}
-                },
-                expand: true
-            });
-
-            return results.slice(0, 5).map(result => {
-                if (!result || !result.doc) return null;
-                return {
-                    title: result.doc.title || 'Untitled',
-                    url: result.ref || '#',
-                    description: result.doc.description || result.doc.excerpt || ''
-                };
-            }).filter(Boolean);
-        } catch (error) {
-            console.error('Error getting suggestions:', error);
-            return [];
-        }
-    };
-
-    // Function to perform search with performance optimization
-    const performSearch = (query) => {
-        if (!query || isSearching) {
-            if (searchResults) {
-                searchResults.style.display = 'none';
-            }
+        if (!query) {
+            console.log('Empty query, clearing results');
+            searchResults.innerHTML = '';
+            searchResults.style.display = 'none';
             return;
         }
 
         if (!searchIndex) {
-            if (searchResults) {
-                searchResults.innerHTML = '<p>Search is initializing...</p>';
-                searchResults.style.display = 'block';
-            }
+            console.log('Search index not loaded yet');
             return;
         }
 
-        isSearching = true;
-
-        // Use requestAnimationFrame for smooth UI updates
-        requestAnimationFrame(() => {
-            try {
-                const results = searchIndex.search(query, {
-                    fields: {
-                        title: {boost: 3},
-                        description: {boost: 2},
-                        content: {boost: 1},
-                        tags: {boost: 2},
-                        excerpt: {boost: 1.5}
-                    },
-                    expand: true
-                });
-
-                if (searchResults) {
-                    if (results && results.length > 0) {
-                        const html = results
-                            .slice(0, 10)
-                            .map(result => {
-                                if (!result || !result.doc) return null;
-                                
-                                const title = result.doc.title || 'Untitled';
-                                const description = result.doc.description || result.doc.excerpt || '';
-                                const tags = result.doc.tags || '';
-                                const url = result.ref || '#';
-                                
-                                return `
-                                    <div class="search-result">
-                                        <a href="${url}">
-                                            <h3>${title}</h3>
-                                            ${description ? `<p class="search-description">${description}</p>` : ''}
-                                            ${tags ? `<div class="search-tags">${tags}</div>` : ''}
-                                        </a>
-                                    </div>
-                                `;
-                            })
-                            .filter(Boolean)
-                            .join('');
-                        
-                        searchResults.innerHTML = html || '<p>No results found</p>';
-                    } else {
-                        searchResults.innerHTML = '<p>No results found</p>';
-                    }
-                    searchResults.style.display = 'block';
-                }
-            } catch (error) {
-                console.error('Error performing search:', error);
-                if (searchResults) {
-                    searchResults.innerHTML = `
-                        <div class="search-error">
-                            <p>An error occurred while searching. Please try again.</p>
-                            <p class="error-details">${error.message}</p>
-                        </div>
-                    `;
-                    searchResults.style.display = 'block';
-                }
-            } finally {
-                isSearching = false;
+        console.log('Performing search for:', query);
+        const results = searchIndex.search(query, {
+            fields: {
+                title: {boost: 2},
+                content: {boost: 1},
+                tags: {boost: 1.5},
+                description: {boost: 1}
             }
         });
-    };
 
-    // Optimized input handler with improved debounce
-    let debounceTimeout;
-    searchInput?.addEventListener('input', (e) => {
-        const query = e.target.value.trim();
-        
-        // Clear previous timeout
-        if (debounceTimeout) {
-            clearTimeout(debounceTimeout);
+        console.log('Search results:', results);
+
+        if (results.length === 0) {
+            console.log('No results found');
+            searchResults.innerHTML = '<div class="no-results">No results found</div>';
+        } else {
+            console.log('Displaying results');
+            searchResults.innerHTML = results
+                .map(result => {
+                    const doc = searchIndex.documentStore.getDoc(result.ref);
+                    return `
+                        <a href="${doc.url}" class="search-result">
+                            <h3>${doc.title}</h3>
+                            ${doc.description ? `<p>${doc.description}</p>` : ''}
+                        </a>
+                    `;
+                })
+                .join('');
         }
 
-        // Show suggestions immediately for short queries
-        if (query && query !== lastQuery && query.length <= 3) {
-            const suggestions = getSuggestions(query);
-            if (suggestions.length > 0 && searchResults) {
-                const suggestionsHtml = suggestions
-                    .map(suggestion => {
-                        if (!suggestion) return null;
-                        return `
-                            <div class="search-suggestion" data-url="${suggestion.url}">
-                                <div class="suggestion-title">${suggestion.title}</div>
-                                ${suggestion.description ? `<div class="suggestion-description">${suggestion.description}</div>` : ''}
-                            </div>
-                        `;
-                    })
-                    .filter(Boolean)
-                    .join('');
-                searchResults.innerHTML = suggestionsHtml || '<p>No suggestions found</p>';
-                searchResults.style.display = 'block';
-            }
-        }
-
-        // Set new timeout for full search with progressive delay
-        debounceTimeout = setTimeout(() => {
-            if (query.length > 3) {
-                performSearch(query);
-                lastQuery = query;
-            }
-        }, query.length <= 3 ? 100 : 300);
+        searchResults.style.display = 'block';
     });
 
-    // Optimized event listeners
-    searchResults?.addEventListener('click', (e) => {
-        const suggestion = e.target.closest('.search-suggestion');
-        if (suggestion) {
-            const url = suggestion.dataset.url;
-            if (url && url !== '#') {
-                window.location.href = url;
-            }
+    // Close search results when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!searchInput.contains(e.target) && !searchResults.contains(e.target)) {
+            console.log('Clicking outside, hiding results');
+            searchResults.style.display = 'none';
         }
     });
-
-    searchInput?.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
-            if (searchResults) {
-                searchResults.style.display = 'none';
-            }
-        }
-    });
-
-    // Optimized click outside handler
-    const handleClickOutside = (e) => {
-        if (!e.target.closest('.search-container')) {
-            if (searchResults) {
-                searchResults.style.display = 'none';
-            }
-        }
-    };
-
-    // Use passive event listener for better performance
-    document.addEventListener('click', handleClickOutside, { passive: true });
 }); 
