@@ -78,6 +78,13 @@ module.exports = function(eleventyConfig) {
         return Array.from(tagSet).sort();
     });
 
+    // Configure posts collection
+    eleventyConfig.addCollection("post", function(collection) {
+        return collection.getFilteredByTag("post").sort((a, b) => {
+            return b.date - a.date;
+        });
+    });
+
     // Add currentYear shortcode
     eleventyConfig.addShortcode("currentYear", () => {
         return new Date().getFullYear();
@@ -90,22 +97,44 @@ module.exports = function(eleventyConfig) {
             this.addField("title");
             this.addField("content");
             this.addField("tags");
+            this.addField("description");
+            this.addField("excerpt");
             this.setRef("url");
         });
 
         // Add documents to the index
         for (const page of collection.getAll()) {
             if (page.url && page.template?.inputPath?.endsWith('.md')) {
-                // Read the raw content
-                const content = await page.template.read();
-                
-                const doc = {
-                    url: page.url,
-                    title: page.data.title,
-                    content: content,
-                    tags: page.data.tags ? page.data.tags.join(' ') : ''
-                };
-                index.addDoc(doc);
+                try {
+                    // Get the raw content of the markdown file
+                    const content = await fs.promises.readFile(page.template.inputPath, 'utf8');
+                    // Remove front matter and get only the content
+                    const contentWithoutFrontMatter = content.replace(/^---[\s\S]*?---\n/, '');
+                    
+                    // Create excerpt from content (first 200 characters)
+                    const excerpt = contentWithoutFrontMatter
+                        .replace(/[#*`_]/g, '') // Remove markdown syntax
+                        .replace(/\n/g, ' ') // Replace newlines with spaces
+                        .trim()
+                        .substring(0, 200);
+
+                    const doc = {
+                        url: page.url,
+                        title: page.data.title || '',
+                        content: contentWithoutFrontMatter || '',
+                        description: page.data.description || '',
+                        tags: page.data.tags ? page.data.tags.join(' ') : '',
+                        excerpt: excerpt
+                    };
+
+                    // Only add if we have some content to search
+                    if (doc.content || doc.title || doc.description) {
+                        index.addDoc(doc);
+                        console.log(`Added to search index: ${doc.title}`);
+                    }
+                } catch (error) {
+                    console.error(`Error processing ${page.template.inputPath}:`, error);
+                }
             }
         }
 
@@ -114,7 +143,10 @@ module.exports = function(eleventyConfig) {
         if (!fs.existsSync(outputDir)) {
             fs.mkdirSync(outputDir, { recursive: true });
         }
-        fs.writeFileSync(path.join(outputDir, "search-index.json"), JSON.stringify(index));
+        
+        const indexJson = JSON.stringify(index);
+        fs.writeFileSync(path.join(outputDir, "search-index.json"), indexJson);
+        console.log('Search index generated successfully');
 
         return index;
     });

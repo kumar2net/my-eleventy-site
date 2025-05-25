@@ -1,0 +1,106 @@
+---
+layout: base.njk
+title: Projects
+---
+
+<section class="projects-listing">
+    <div class="container">
+        <h1>Projects</h1>
+        <div class="project-grid">
+            {%- for post in collections.post | filterByTag("project") -%}
+            <article class="project-card">
+                <h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
+                <div class="post-meta">
+                    <time datetime="{{ post.date | dateIso }}">{{ post.date | dateReadable }}</time>
+                    {% if post.data.tags %}
+                    <div class="tags">
+                        {% for tag in post.data.tags %}
+                            {% if tag != "post" and tag != "project" %}
+                            <span class="tag">{{ tag }}</span>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                </div>
+                {% if post.data.description %}
+                <p>{{ post.data.description }}</p>
+                {% endif %}
+                <a href="{{ post.url }}" class="read-more">Read more</a>
+            </article>
+            {%- endfor -%}
+        </div>
+    </div>
+</section>
+
+<style>
+    .projects-listing {
+        padding: 4rem 0;
+    }
+
+    .project-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+
+    .project-card {
+        background: var(--background-color);
+        border-radius: 0.5rem;
+        padding: 1.5rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s ease;
+    }
+
+    .project-card:hover {
+        transform: translateY(-4px);
+    }
+
+    .project-card h2 {
+        margin: 0 0 1rem;
+        font-size: 1.5rem;
+    }
+
+    .project-card h2 a {
+        color: var(--text-color);
+        text-decoration: none;
+    }
+
+    .project-card h2 a:hover {
+        color: var(--primary-color);
+    }
+
+    .post-meta {
+        font-size: 0.9rem;
+        color: #666;
+        margin-bottom: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .tags {
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+    }
+
+    .tag {
+        background: var(--secondary-background);
+        padding: 0.25rem 0.75rem;
+        border-radius: 1rem;
+        font-size: 0.8rem;
+    }
+
+    .read-more {
+        display: inline-block;
+        margin-top: 1rem;
+        color: var(--primary-color);
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    .read-more:hover {
+        text-decoration: underline;
+    }
+</style> 

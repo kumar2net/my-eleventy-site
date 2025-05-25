@@ -19,7 +19,7 @@ title: Home
     <div class="project-grid">
         <div class="project-card">
             <h3>Project 1</h3>
-            <p>Description of your first amazing project goes here. What problems did it solve?</p>
+            <p>learning to use AI code editor with proper prompting and commit to github repo and auto deploy to web server my Personal Website</p>
             <a href="/projects/project-1" class="read-more">Read More →</a>
         </div>
         <div class="project-card">
@@ -38,12 +38,25 @@ title: Home
 <section class="latest-posts">
     <h2>Latest Blog Posts</h2>
     <div class="post-grid">
-        {%- for post in collections.posts | reverse -%}
+        {%- for post in collections.post -%}
         {% if loop.index0 < 3 %}
         <article class="post-card">
             <h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+            <div class="post-meta">
             <time datetime="{{ post.date | dateIso }}">{{ post.date | dateReadable }}</time>
+                {% if post.data.tags %}
+                <div class="tags">
+                    {% for tag in post.data.tags %}
+                        {% if tag != "post" %}
+                        <span class="tag">{{ tag }}</span>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </div>
+            {% if post.data.description %}
             <p>{{ post.data.description }}</p>
+            {% endif %}
             <a href="{{ post.url }}" class="read-more">Read More →</a>
         </article>
         {% endif %}
@@ -56,3 +69,157 @@ title: Home
     <p>I'm always interested in hearing about new projects and opportunities.</p>
     <a href="/contact" class="button primary">Get in Touch</a>
 </section> 
+
+<style>
+    .hero {
+        text-align: center;
+        padding: 4rem 0;
+        background-color: var(--secondary-background);
+    }
+
+    .hero-content {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 1rem;
+    }
+
+    .hero-text {
+        font-size: 1.25rem;
+        margin: 1.5rem 0;
+    }
+
+    .hero-buttons {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        margin-top: 2rem;
+    }
+
+    .button {
+        display: inline-block;
+        padding: 0.75rem 1.5rem;
+        border-radius: 0.375rem;
+        text-decoration: none;
+        font-weight: 500;
+        transition: all 0.2s ease;
+    }
+
+    .button.primary {
+        background-color: var(--primary-color);
+        color: white;
+    }
+
+    .button.secondary {
+        background-color: var(--secondary-background);
+        color: var(--text-color);
+        border: 1px solid var(--border-color);
+    }
+
+    .button:hover {
+        transform: translateY(-2px);
+    }
+
+    .featured-projects,
+    .latest-posts {
+        padding: 4rem 0;
+    }
+
+    .project-grid,
+    .post-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+
+    .project-card,
+    .post-card {
+        background: var(--background-color);
+        border-radius: 0.5rem;
+        padding: 1.5rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s ease;
+    }
+
+    .project-card:hover,
+    .post-card:hover {
+        transform: translateY(-4px);
+    }
+
+    .project-card h3,
+    .post-card h3 {
+        margin: 0 0 1rem;
+        font-size: 1.5rem;
+    }
+
+    .project-card h3 a,
+    .post-card h3 a {
+        color: var(--text-color);
+        text-decoration: none;
+    }
+
+    .project-card h3 a:hover,
+    .post-card h3 a:hover {
+        color: var(--primary-color);
+    }
+
+    .post-meta {
+        font-size: 0.9rem;
+        color: #666;
+        margin-bottom: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .tags {
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+    }
+
+    .tag {
+        background: var(--secondary-background);
+        padding: 0.25rem 0.75rem;
+        border-radius: 1rem;
+        font-size: 0.8rem;
+    }
+
+    .read-more {
+        display: inline-block;
+        margin-top: 1rem;
+        color: var(--primary-color);
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    .read-more:hover {
+        text-decoration: underline;
+    }
+
+    .cta {
+        text-align: center;
+        padding: 4rem 0;
+        background-color: var(--secondary-background);
+    }
+
+    .cta h2 {
+        margin-bottom: 1rem;
+    }
+
+    .cta p {
+        max-width: 600px;
+        margin: 0 auto 2rem;
+    }
+
+    @media (max-width: 768px) {
+        .hero-buttons {
+            flex-direction: column;
+        }
+
+        .button {
+            width: 100%;
+            text-align: center;
+        }
+    }
+</style> 
