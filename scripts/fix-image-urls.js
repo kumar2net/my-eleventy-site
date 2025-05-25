@@ -16,9 +16,6 @@ async function tryDownloadImage(originalUrl, filename) {
   const urls = [
     originalUrl,
     originalUrl.replace('http://', 'https://'),
-    // Try WordPress.com URL variations
-    originalUrl.replace('http://kumar2net.wordpress.com/', 'https://kumar2net.files.wordpress.com/'),
-    originalUrl.replace('http://kumar2net.wordpress.com/wp-content/', 'https://kumar2net.files.wordpress.com/'),
   ];
 
   for (const url of urls) {
@@ -82,7 +79,7 @@ function extractImageUrls(content) {
 
   while ((match = refStyleRegex.exec(content)) !== null) {
     const [fullMatch, alt, id, _, url, title] = match;
-    if (url.startsWith('http:')) {
+    if (url.startsWith('http:') || url.startsWith('https:')) {
       images.push({ fullMatch, alt, url, title, type: 'reference' });
     }
   }
@@ -91,7 +88,7 @@ function extractImageUrls(content) {
   const inlineRegex = /!\[([^\]]*)\]\(([^)]+)(?:\s+"([^"]+)")?\)/g;
   while ((match = inlineRegex.exec(content)) !== null) {
     const [fullMatch, alt, url, title] = match;
-    if (url.startsWith('http:')) {
+    if (url.startsWith('http:') || url.startsWith('https:')) {
       images.push({ fullMatch, alt, url, title, type: 'inline' });
     }
   }
