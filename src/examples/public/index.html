@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Analytics Dashboard</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 2rem; background: #f9f9f9; }
+        h1 { color: #333; }
+        .section { margin-bottom: 2rem; }
+        table { border-collapse: collapse; width: 100%; background: #fff; }
+        th, td { border: 1px solid #ddd; padding: 8px; }
+        th { background: #eee; }
+        input, button { padding: 0.5rem; margin: 0.2rem; }
+        .card { background: #fff; padding: 1rem; border-radius: 8px; box-shadow: 0 2px 8px #0001; margin-bottom: 1rem; }
+    </style>
+</head>
+<body>
+    <h1>Blog Analytics Dashboard</h1>
+    <div class="section card" id="stats-section">
+        <h2>Blog Statistics</h2>
+        <pre id="stats"></pre>
+    </div>
+    <div class="section card" id="recent-section">
+        <h2>Recent Posts</h2>
+        <table id="recent-posts">
+            <thead><tr><th>Title</th><th>Date</th><th>Categories</th><th>Reading Time</th><th>Sentiment</th></tr></thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <div class="section card" id="positive-section">
+        <h2>Most Positive Posts</h2>
+        <table id="positive-posts">
+            <thead><tr><th>Title</th><th>Date</th><th>Sentiment Score</th></tr></thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <div class="section card">
+        <h2>Posts by Category</h2>
+        <input type="text" id="cat-input" placeholder="Enter category (e.g. tennis)">
+        <button onclick="fetchCategory()">Fetch</button>
+        <table id="cat-posts">
+            <thead><tr><th>Title</th><th>Date</th><th>Reading Time</th></tr></thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <div class="section card">
+        <h2>Similar Posts</h2>
+        <input type="text" id="sim-title-input" placeholder="Enter post title">
+        <button onclick="fetchSimilar()">Fetch</button>
+        <table id="sim-posts">
+            <thead><tr><th>Title</th><th>Categories</th><th>Reading Time</th></tr></thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <script>
+        async function fetchStats() {
+            const res = await fetch('/api/stats');
+            const data = await res.json();
+            document.getElementById('stats').textContent = JSON.stringify(data, null, 2);
+        }
+        async function fetchRecent() {
+            const res = await fetch('/api/recent');
+            const data = await res.json();
+            const tbody = document.querySelector('#recent-posts tbody');
+            tbody.innerHTML = '';
+            data.forEach(post => {
+                tbody.innerHTML += `<tr><td>${post.title}</td><td>${post.date}</td><td>${post.categories.join(', ')}</td><td>${post.readingTime} min</td><td>${post.sentiment.score.toFixed(2)}</td></tr>`;
+            });
+        }
+        async function fetchPositive() {
+            const res = await fetch('/api/positive');
+            const data = await res.json();
+            const tbody = document.querySelector('#positive-posts tbody');
+            tbody.innerHTML = '';
+            data.forEach(post => {
+                tbody.innerHTML += `<tr><td>${post.title}</td><td>${post.date}</td><td>${post.sentiment.score.toFixed(2)}</td></tr>`;
+            });
+        }
+        async function fetchCategory() {
+            const cat = document.getElementById('cat-input').value;
+            if (!cat) return;
+            const res = await fetch(`/api/category?cat=${encodeURIComponent(cat)}`);
+            const data = await res.json();
+            const tbody = document.querySelector('#cat-posts tbody');
+            tbody.innerHTML = '';
+            data.forEach(post => {
+                tbody.innerHTML += `<tr><td>${post.title}</td><td>${post.date}</td><td>${post.readingTime} min</td></tr>`;
+            });
+        }
+        async function fetchSimilar() {
+            const title = document.getElementById('sim-title-input').value;
+            if (!title) return;
+            const res = await fetch(`/api/similar?title=${encodeURIComponent(title)}`);
+            const data = await res.json();
+            const tbody = document.querySelector('#sim-posts tbody');
+            tbody.innerHTML = '';
+            if (Array.isArray(data)) {
+                data.forEach(post => {
+                    tbody.innerHTML += `<tr><td>${post.title}</td><td>${(post.categories||[]).join(', ')}</td><td>${post.readingTime} min</td></tr>`;
+                });
+            }
+        }
+        fetchStats();
+        fetchRecent();
+        fetchPositive();
+    </script>
+</body>
+</html> 

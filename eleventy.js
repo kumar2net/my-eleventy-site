@@ -10,6 +10,10 @@ module.exports = function(eleventyConfig) {
   
   // Copy the `js` directory to the output
   eleventyConfig.addPassthroughCopy("src/js");
+  module.exports = function(eleventyConfig) {
+  eleventyConfig.addPassthroughCopy("src/assets/images");
+  //
+};
 
   return {
     dir: {
