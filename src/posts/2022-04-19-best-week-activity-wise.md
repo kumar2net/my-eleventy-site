@@ -8,8 +8,12 @@ categories: ["fitness"]
 
 Last week probably was the best and the Fitbit charge 5 data confirms that
 
-![] (/assets/images/best-week-activity-wise-03f8bb64. jpg) ![] (/assets/images/best-week-activity-wise-fb
+![Best Week Activity Wise]
 
-828010. jpg) Fitbit data
+ 
+
+![Best Week Activity Wise]
+
+ Fitbit data
 
 Need to keep at least this level of activity going forward 🤞

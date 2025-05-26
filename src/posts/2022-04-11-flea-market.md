@@ -14,9 +14,13 @@ Women folk spend a lot of time at handloom dress material shops while I see men 
 
 My favourite is wood doll shops
 
-![] (/assets/images/flea-market-48569ecc. jpg) ![] (/assets/images/flea-market-5114888
+![Flea Market]
 
-f. jpg) Of course enough food stalls - spring potato 🥔 something new i see these day
+ 
+
+![Flea Market]
+
+ Of course enough food stalls - spring potato 🥔 something new i see these day
 
 s. Cut like a spring, fried in oil & cheese or hot sauce toppin
 
@@ -24,6 +28,10 @@ g. Sugarcane juice, jigarthanda, Delhi appalam, chat were all there
 
 The type of dust mats, floor mats ஜமுக்காளம் beautifully woven
 
-![] (/assets/images/flea-market-243fdd6b. jpg) Cast iron kitchen utensils are fad these days - retro
+![Flea Market]
 
-![] (/assets/images/flea-market-03617bf9. jpg) Consume iron involuntarily when you cook food using these
+ Cast iron kitchen utensils are fad these days - retro
+
+![Flea Market]
+
+ Consume iron involuntarily when you cook food using these

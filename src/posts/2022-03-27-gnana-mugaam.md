@@ -44,6 +44,18 @@ t. Well conducted progra
 
 m. Location - foothills of Jarugu mountain range near Salem
 
-![] (/assets/images/gnana-mugaam-c8a656ea. jpg) ![] (/assets/images/gnana-mugaam-a08312d2. jpg) ![] (/assets/images/gnana-mugaam-895f9e
+![Gnana Mugaam]
 
-61. jpg) ![] (/assets/images/gnana-mugaam-ccc7647f. jpg) Spick\*
+ 
+
+![Gnana Mugaam]
+
+ 
+
+![Gnana Mugaam]
+
+ 
+
+![Gnana Mugaam]
+
+ Spick\*

@@ -32,6 +32,13 @@ async function imageShortcode(src, alt, sizes = "100vw") {
     return Image.generateHTML(metadata, imageAttributes);
 }
 
+// Instagram shortcode
+function instagramShortcode(postId) {
+    const shortcodePath = path.join(__dirname, "src/_includes/shortcodes/instagram.njk");
+    const shortcodeContent = fs.readFileSync(shortcodePath, 'utf8');
+    return shortcodeContent.replace(/{{ postId }}/g, postId);
+}
+
 module.exports = function(eleventyConfig) {
     // Plugins
     eleventyConfig.addPlugin(syntaxHighlight);
@@ -46,6 +53,11 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
     eleventyConfig.addLiquidShortcode("image", imageShortcode);
     eleventyConfig.addJavaScriptFunction("image", imageShortcode);
+
+    // Instagram shortcode
+    eleventyConfig.addNunjucksShortcode("instagram", instagramShortcode);
+    eleventyConfig.addLiquidShortcode("instagram", instagramShortcode);
+    eleventyConfig.addJavaScriptFunction("instagram", instagramShortcode);
 
     // Date filters
     eleventyConfig.addFilter("dateIso", date => {

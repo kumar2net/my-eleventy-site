@@ -14,13 +14,17 @@ m. com/p/Cc1yPZ7NPVy/?igshid=YmMyMTA2M2Y=
 
 He used Penn tour balls and they had xxx marks on them and he explained that it is shipped that way so that it's not used for game play. I normally buy the standard cans so didn't know this
 
-![] (/assets/images/dad-coach-the-jani-7a30b97d. jpg) It's been a long long time since I met Bhargav - an ever smiling guy from Gujju lan
+![Dad Coach The Jani]
+
+ It's been a long long time since I met Bhargav - an ever smiling guy from Gujju lan
 
 d. He and his young family have adapted to Chennai extremely well and he loves south Indian foo
 
 d. I keep giving him references to get quality dhokla
 
-![] (/assets/images/dad-coach-the-jani-adfe1202. jpg) BJ in foreground and Saravanan in the background. Similar type of playing styl
+![Dad Coach The Jani]
+
+ BJ in foreground and Saravanan in the background. Similar type of playing styl
 
 e. They can't hurt the ball 😔
 

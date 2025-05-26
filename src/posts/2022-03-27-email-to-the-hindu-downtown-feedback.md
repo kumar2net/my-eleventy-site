@@ -6,4 +6,4 @@ tags: ["post","environment","beach-cleaning-environment-chennai-corporation"]
 categories: ["environment"]
 ---
 
-![] (/assets/images/email-to-the-hindu-downtown-feedback-41585fd3. jpg)
+![Email To The Hindu Downtown Feedback](/assets/images/email-to-the-hindu-downtown-feedback-41585fd3.jpg)

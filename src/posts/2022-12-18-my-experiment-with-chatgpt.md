@@ -10,9 +10,13 @@ Artificial Intelligence & Deep learning has taken a giant Leap indeed and I am e
 
 I posed the below questions to it?
 
-![] (/assets/images/my-experiment-with-chatgpt-36f22be8. png) ![] (/assets/images/my-experiment-with-chatgpt-ff068b
+![My Experiment With Chatgpt]
 
-95. png) Write a blog post on farming at Madampatti village
+ 
+
+![My Experiment With Chatgpt]
+
+ Write a blog post on farming at Madampatti village
 
 It replied as follows: Farming in Madampatti Village
 

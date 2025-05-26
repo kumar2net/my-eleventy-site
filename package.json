@@ -6,13 +6,15 @@
   "scripts": {
     "build": "eleventy",
     "start": "eleventy --serve",
-    "debug": "DEBUG=* eleventy"
+    "debug": "DEBUG=* eleventy",
+    "fix-images": "node scripts/fix-image-refs.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "^3.1.0",
+    "glob": "^10.3.10",
     "he": "^1.2.0",
     "markdown-it": "^13.0.1",
     "mkdirp": "^3.0.1",
@@ -88,9 +90,6 @@
     "function-bind": "^1.1.2",
     "get-intrinsic": "^1.3.0",
     "get-proto": "^1.0.1",
-    "glob": "^7.2.3",
-    "glob-parent": "^5.1.2",
-    "gopd": "^1.2.0",
     "graceful-fs": "^4.2.11",
     "gray-matter": "^4.0.3",
     "hamljs": "^0.6.2",

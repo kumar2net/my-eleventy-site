@@ -8,19 +8,35 @@ categories: ["sports"]
 
 Yes 15 of us got together this morning and the underlying reason - Sam commanded that we all report on time. He presented all of us with a beautiful Adidas Tshirt 👕 Brillant 🙌 gesture and we all shall treasure this
 
-![] (/assets/images/gang-of-fifteen-389e7b4f. jpg) All BIG men got 🔵 colour while Red to the rest of us
+![Gang Of Fifteen]
 
-![] (/assets/images/gang-of-fifteen-fea95279. jpg) Chandru & Sri getting their Tshirt from Sam
+ All BIG men got 🔵 colour while Red to the rest of us
 
-![] (/assets/images/gang-of-fifteen-d2f48a7e. jpg) Kaushik Ajay Venki Sam & Vinod
+![Gang Of Fifteen]
 
-![] (/assets/images/gang-of-fifteen-8898e6cb. jpg) All 15 in one 🖼️
+ Chandru & Sri getting their Tshirt from Sam
+
+![Gang Of Fifteen]
+
+ Kaushik Ajay Venki Sam & Vinod
+
+![Gang Of Fifteen]
+
+ All 15 in one 🖼️
 
 Sri picked me up in his Nissan Magnite sharply on time & Chandru dropped me back home in his Kia Sonnet
 
-![] (/assets/images/gang-of-fifteen-2bfab60c. jpg) ![] (/assets/images/gang-of-fifteen-9248c633. jpg) These 2 are rare & rarest sightings & Keerthi has never seen a rising ☀️ ever in his life before today 🤷
+![Gang Of Fifteen]
 
-![] (/assets/images/gang-of-fifteen-259e11dd. jpg) Nimit & Keerthi
+ 
+
+![Gang Of Fifteen]
+
+ These 2 are rare & rarest sightings & Keerthi has never seen a rising ☀️ ever in his life before today 🤷
+
+![Gang Of Fifteen]
+
+ Nimit & Keerthi
 
 Abhiroop booked all 3 courts and as usual the banter started very early - some of Kaushik's shots were so low and still clearing the net and my racquet level measurement showed the net height is indeed low. The court supervisor came with the measurement tape and corrected the anomal
 

@@ -6,7 +6,9 @@ tags: ["post","uncategorized","one-liners","quotes"]
 categories: ["uncategorized"]
 ---
 
-![] (/assets/images/the-one-liners-i-like-69c4cf9a. jpg) - Be the change you want to see
+![The One Liners I Like]
+
+ - Be the change you want to see
 - Connect the dots
 - This too shall pass
 - Let things flow

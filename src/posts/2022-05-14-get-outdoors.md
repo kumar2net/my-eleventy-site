@@ -18,6 +18,8 @@ https: //www. instagra
 
 m. com/p/CdhdALyI33T/?igshid=YmMyMTA2M2Y=
 
-![] (/assets/images/get-outdoors-cab96dc8. jpg) So beautiful & colorful
+![Get Outdoors]
+
+ So beautiful & colorful
 
 Guten morgen ☀️🌻

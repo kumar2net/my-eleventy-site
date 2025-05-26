@@ -16,10 +16,16 @@ o. gl/y5VmdRJAAtNVyzqu5
 
 Then I learned he shot that as a hyperlapse
 
-![] (/assets/images/hyperlapse-gondola-ride-874783ba. jpg) So a 10 minutes gondola ride is compressed to 30 seconds and all these using a smartphone
+![Hyperlapse Gondola Ride]
 
-![] (/assets/images/hyperlapse-gondola-ride-ebf39a03. png) Hyperlapse Vs Timelapse
+ So a 10 minutes gondola ride is compressed to 30 seconds and all these using a smartphone
+
+![Hyperlapse Gondola Ride]
+
+ Hyperlapse Vs Timelapse
 
 I am aware of timelapse as I have seen lunar phases captured by friends using Nikon SLR
 
-![] (/assets/images/hyperlapse-gondola-ride-e8f2dcec. jpg) Sea to Sky Gondola ride
+![Hyperlapse Gondola Ride]
+
+ Sea to Sky Gondola ride

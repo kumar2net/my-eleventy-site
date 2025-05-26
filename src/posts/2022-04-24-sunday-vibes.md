@@ -18,16 +18,26 @@ h. We lost 6-4 but we did reasonably wel
 
 l. I am gradually picking up steam and will improve in coming weeks
 
-![] (/assets/images/sunday-vibes-f9fe3670. jpg) ![] (/assets/images/sunday-vibes-5ad
+![Sunday Vibes]
 
-62043. jpg) Seeing Ganesh after a long time
+ 
 
-![] (/assets/images/sunday-vibes-0aa431ce. jpg) With the effervescent Kaushik
+![Sunday Vibes]
+
+ Seeing Ganesh after a long time
+
+![Sunday Vibes]
+
+ With the effervescent Kaushik
 
 Kaushik looked jaded - maybe last evening dinner 🥣🥗 tired him out
 
-![] (/assets/images/sunday-vibes-e05d0088. jpg) Abhi's new possession Babolat Pure Aero Rafa looks gorgeous
+![Sunday Vibes]
 
-![] (/assets/images/sunday-vibes-3842f0e6. jpg) Persian Silk flower aka இலவமரம் பூ
+ Abhi's new possession Babolat Pure Aero Rafa looks gorgeous
+
+![Sunday Vibes]
+
+ Persian Silk flower aka இலவமரம் பூ
 
 Many thanks friends for a brilliant Sunday morning and keep egging me as you always do. Ciao 🌹

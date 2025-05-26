@@ -84,6 +84,8 @@ t.
 
 10\. in the mobile phone browser setting select 'Desktop site' as per below screenshot - click on 3 dots and click/tick mark on 'Desktop Site'
 
-![] (/assets/images/customizing-youtube-video-links-d6f03640. jpg) 10\. Now we are all set. The video will start and end exactly at the start and end time we had specified
+![Customizing Youtube Video Links]
+
+ 10\. Now we are all set. The video will start and end exactly at the start and end time we had specified
 
 Happy viewing

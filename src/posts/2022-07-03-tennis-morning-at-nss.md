@@ -16,9 +16,13 @@ s. They said these are more suited for hard courts & are recommending Dunlop AO 
 
 t. With the bit of monsoon rains the courts wore a settled look
 
-![] (/assets/images/tennis-morning-at-nss-eefc1989. jpg) ![] (/assets/images/tennis-morning-at-nss-334928a
+![Tennis court at NSS]
 
-1. jpg) Jayvanth
+ 
+
+![Tennis court view]
+
+ Jayvanth
 
 Jayvanth was hitting forehands at damn good speeds, loaded with heavy topspin and closer to net. Once I got used to his speed, I was able to volley back at him and won some good points to
 
@@ -26,10 +30,18 @@ o. We lost closely 6-6 (tiebreak 8-6) There is a doubles tournament - organised 
 
 r. Also achieved my target zone minutes >23 and I am sure Chitra will be happy
 
-![] (/assets/images/tennis-morning-at-nss-dbb0ba40. png) ![] (/assets/images/tennis-morning-at-nss-efad285b. jpg) Cricket Practice at NSS - longing to wear proper kit and bat a while at nets sometime
+![Tennis practice]
+
+ 
+
+![Cricket practice]
+
+ Cricket Practice at NSS - longing to wear proper kit and bat a while at nets sometime
 
 So much nostalgia when I watched on Live TV, some TNPL matches (Tamilnadu IPL) being played at India cements ground at Sankar nagar, Thirunelveli 627357. The pincode is etched in my memory forever _♾️_
 
-![] (/assets/images/tennis-morning-at-nss-9b5c6bcc. jpg) NSS
+![NSS campus]
+
+ NSS
 
 Ciao

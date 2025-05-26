@@ -10,7 +10,9 @@ It's a long long time really. Since I had visited ISRO (Indian Space Centre Orga
 
 e.
 
-![] (/assets/images/cinema-in-a-theatre-83111f72. png) We went with Mythily to SPI cinemas - now PVR at Brookfields Mall, Coimbatore
+![Cinema In A Theatre]
+
+ We went with Mythily to SPI cinemas - now PVR at Brookfields Mall, Coimbatore
 
 Solid Propulsion, Liquid Propulsion, Cryogenic engines are some technical stuff I could relate to. That Madhavan R had taken this kind of subject and directed it too deserves a lot of appreciation
 
@@ -23,7 +25,9 @@ w. thehind
 u. com/entertainment/movies/madhavan-on-rocketry-the-nambi-effect-we-need-to-showcase-indias-scientific-achievements/article
 65548055. ece) Nice ambience at theatre and Brookfields mall is posh and one of the largest food courts in a mall that i had seen thus far. Of course I had my burrito at Taco's
 
-![] (/assets/images/cinema-in-a-theatre-70db915f. jpg) We got stuck in a massive traffic snarl near Perur when getting back home and had to navigate through narrow lanes to get around the vehicle pileups
+![Cinema In A Theatre]
+
+ We got stuck in a massive traffic snarl near Perur when getting back home and had to navigate through narrow lanes to get around the vehicle pileups
 
 So I would recommend that you give it a watch too 🍿🎦
 

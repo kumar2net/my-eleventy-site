@@ -12,7 +12,7 @@ But I was quite surprised at the amount of Fertilizer the farmer used. He also s
 
 n. The stench from the fertilizer is a bit unbearable though
 
-![] (/assets/images/farming-at-madampatti-village-ad94c02c. jpg) From barren land to fledgling crop in a few months
+![From barren land to fledgling crop in a few months]
 
 The steps I noticed: - The farmer Used JCB to take out the massive weeds
 - Used Tiller to soften the soil

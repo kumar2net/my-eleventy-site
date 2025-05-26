@@ -10,7 +10,9 @@ I always complain to whoever will listen to: about how hot Chennai weather is - 
 
 But what a beautiful change the depression somewhere else in Orissa brought much welcome rain yesterday. Court had soaked it up most of it and we stood in the baseline and played in this beautiful Ooty weather ☁️
 
-![] (/assets/images/weather-tennis-cebd295b. jpg) Ooty weather
+![Weather Tennis]
+
+ Ooty weather
 
 https: //www. instagra
 

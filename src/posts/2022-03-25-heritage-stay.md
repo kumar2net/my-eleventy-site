@@ -12,6 +12,8 @@ It's > 100 years old and the teak wood ceiling planks, wall panels and the way t
 
 o. Women folk a word of caution - do NOT ring the bell in Kerala temples - lest you will get yelled at 📢
 
-![] (/assets/images/heritage-stay-8d04bc9e. jpg) ![] (/assets/images/heritage-stay-fc5db13
+![Heritage Stay]
 
-e. jpg)
+ 
+
+![Heritage Stay](/assets/images/heritage-stay-fc5db13e.jpg)

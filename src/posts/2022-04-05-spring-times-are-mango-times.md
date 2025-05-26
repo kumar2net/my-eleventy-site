@@ -10,6 +10,8 @@ When we start seeing these lovely flowers & vadu (tiny) mangoes it's spring time
 
 The heat is ramping up and starting to scorch 🔥 and the famous Chennai parable which I am never tired of telling folks from other cities - we have 3 climates here in Chennai- Hot Hotter Hottest ☺️
 
-![] (/assets/images/spring-times-are-mango-times-ac9c1978. jpg) ![] (/assets/images/spring-times-are-mango-times-df852ac
+![Spring Times Are Mango Times]
 
-2. jpg)
+ 
+
+![Spring Times Are Mango Times](/assets/images/spring-times-are-mango-times-df852ac2.jpg)

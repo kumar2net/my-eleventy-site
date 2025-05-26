@@ -8,7 +8,9 @@ categories: ["food","health"]
 
 Dried Neem flowers sauteed in a little bit of Aavin ghee and mixed with rice is gourmet food to me
 
-![] (/assets/images/bitter-not-at-all-903ae02a. jpg) With bitter guard curry they pair wonderfull
+![Bitter Not At All]
+
+ With bitter guard curry they pair wonderfull
 
 y. Try it out at home & let me kno
 

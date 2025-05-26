@@ -10,7 +10,13 @@ Had a good set of doubles PPA, Central Polytechnic - CPT grounds at Taramani wit
 
 s. I didn't make much unforced errors 🤷‍♀️
 
-![] (/assets/images/power-pak-academy-cbb103ff. jpg) ![] (/assets/images/power-pak-academy-44eeda52. jpg) We hired 2 courts for 2 hours and the hard courts are decen
+![Power Pak Academy]
+
+ 
+
+![Power Pak Academy]
+
+ We hired 2 courts for 2 hours and the hard courts are decen
 
 t. Lovely to meet friends - Sri Krish Nimit Vinod Abhi & Venk
 
@@ -22,14 +28,22 @@ e. You earned your 🍺
 
 Folks are playing league cricket match 🏏 in whites in the adjacent ground inspite of this scorching heat
 
-![] (/assets/images/power-pak-academy-30c70699. png) Yesterday noon time felt like 50 C / 122 F
+![Power Pak Academy]
+
+ Yesterday noon time felt like 50 C / 122 F
 
 Big thanks to my friend's for making my day bright 😊
 
 I Achieved my zone minutes target too
 
-![] (/assets/images/power-pak-academy-c1b053d1. png) Baseline is 23
+![Power Pak Academy]
 
-![] (/assets/images/power-pak-academy-121d10ac. jpg) ![] (/assets/images/power-pak-academy-cd308d7
+ Baseline is 23
 
-d. jpg) Sri seemed in pain holding his back but knowing him he will not give a pass to tennis & idly, mutton kolambu on a Sunday morning
+![Power Pak Academy]
+
+ 
+
+![Power Pak Academy]
+
+ Sri seemed in pain holding his back but knowing him he will not give a pass to tennis & idly, mutton kolambu on a Sunday morning
