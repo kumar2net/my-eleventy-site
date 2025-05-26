@@ -1,0 +1,5 @@
+total 24
+-rw-rw-r-- 1 kumara kumara 6215 May 23 16:54 fix-image-urls.js
+-rw-rw-r-- 1 kumara kumara 8008 May 23 16:57 wordpress-to-eleventy.js
+-rw-rw-r-- 1 kumara kumara 5431 May 23 17:00 cleanup-markdown.js
+-rw-rw-r-- 1 kumara kumara    0 May 26 06:47 scripts_size_25may.txt
