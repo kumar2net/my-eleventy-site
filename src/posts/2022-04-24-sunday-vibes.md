@@ -7,14 +7,19 @@ categories: ["sports"]
 ---
 
 Saravanan and self were the only ones on time - 6. 30 am at court today. Abhi, Venki, Kaushik, Krish & Ganesh made up the list of
+
  7. One drop out this week too
 
 Abhi opened up a fresh can of Slazenger Championship balls and I woke up Venki from slumber with an acute drop shot - haven't seen him sprint like that. He tried an immediate revenge dro
+
 p. Abhi played front court partnering with me and that's good to see as I always believe that decent volley play will make his game go up a notc
+
 h. We lost 6-4 but we did reasonably wel
+
 l. I am gradually picking up steam and will improve in coming weeks
 
 ![] (/assets/images/sunday-vibes-f9fe3670. jpg) ![] (/assets/images/sunday-vibes-5ad
+
 62043. jpg) Seeing Ganesh after a long time
 
 ![] (/assets/images/sunday-vibes-0aa431ce. jpg) With the effervescent Kaushik

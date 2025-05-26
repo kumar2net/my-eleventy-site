@@ -7,6 +7,7 @@ categories: ["nature","zen"]
 ---
 
 The smell of the first rain on fertile soil - Petrichor intoxicated me. I read that perfume/ attars are available to
+
 o. Subsequently South West monsoon intensity picked up and we had a good spell during the past fortnight
 
 ![] (/assets/images/rain-soil-petrichor-ee24ab53. png) Definition by Oxford languages

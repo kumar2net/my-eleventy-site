@@ -23,6 +23,7 @@ Sri picked me up in his Nissan Magnite sharply on time & Chandru dropped me back
 ![] (/assets/images/gang-of-fifteen-259e11dd. jpg) Nimit & Keerthi
 
 Abhiroop booked all 3 courts and as usual the banter started very early - some of Kaushik's shots were so low and still clearing the net and my racquet level measurement showed the net height is indeed low. The court supervisor came with the measurement tape and corrected the anomal
+
 y. Chandru tried his best to beef me up by covering court but Ajay & Kaushik won 6-2
 
 Sri Abhiroop Keerthi Venki played on court 1 and Sam Saravanan Krish Nimit on court 3. Vinod Ganesh & Saurabh pooled in and we mixed pairing and continued playing
@@ -30,10 +31,15 @@ Sri Abhiroop Keerthi Venki played on court 1 and Sam Saravanan Krish Nimit on co
 Our zestful boy Kaushik had brought a dozen bananas and we got fresh fruit juice ordered. Sri asked them to get me a couple of idlies and that took care of my diabetic nutrition for the morning
 
 All in all a wonderful morning - time spent with a wonderful group of friends. We were still reminiscing about the Novak Vs Alcaraz MM Open semifinal last evenin
+
 g. What brutal power and court sense this 19 year old possesse
+
 s. To beat Rafa & Novak back to back takes some doing but is he good to win slams? - where it's best of 5 sets and over 2 weeks, we will wait and se
+
 e. Roland garros is just around the corne
+
 r. As I was telling Nimit we are lucky to be around to watch high class tennis, wonderful broadcasts and the amount of detailed stats they provid
+
 e. That we play too makes us nuanced and appreciate better the quality of play by such supremely fit athletes
 
 Auf Wiedersehen 🌹

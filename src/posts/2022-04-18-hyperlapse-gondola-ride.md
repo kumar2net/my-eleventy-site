@@ -9,7 +9,9 @@ categories: ["travels"]
 When I started to view the video, my immediate concern was - boy hope he doesn't drop his smartphone. Please click on the below link to watch the video
 
 https: //photos. ap
+
 p. go
+
 o. gl/y5VmdRJAAtNVyzqu5
 
 Then I learned he shot that as a hyperlapse

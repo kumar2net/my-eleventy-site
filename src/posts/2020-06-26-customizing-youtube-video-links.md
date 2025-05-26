@@ -7,14 +7,20 @@ categories: ["android-youtube-video","uncategorized"]
 ---
 
 In the fast paced world with less and less time available to us, we can use this trick. Suppose if we want someone to listen to part/ snippet of the video which is for few minutes duration only there is a way to do i
+
 t. We basically modify the youtube url/ link by passing the start and end time in second
+
 s. 1. Original youtube url: **https: //yout
-u. be/qqpOS4VMdhQ**
-2. When you play the video in Youtube app or in browser - Chrome, Firefox etc.. it is for
+
+u. be/qqpOS4VMdhQ**2. When you play the video in Youtube app or in browser - Chrome, Firefox et
+c.. it is for
+
  40. 45 - 40 minute 45 seconds
 
 3. Now let us say the key part you want someone to listen is from
+
  1. 03 to
+
  7. 28 minutes
 
 4. convert the above start and end time to**seconds**only parameter
@@ -50,20 +56,28 @@ end in sec only
 5\. Next we compose the link as follows: a. type as per the below
 
 https: //www. youtub
+
 e. com/embed/
 
 b. then cut and paste the video link after / in the original url
 - *qqpOS4VMdhQ**c. append to 5. a which we typed in keyboard: https: //ww
+
 w. youtub
+
 e. com/embed/**qqpOS4VMdhQ**
 
 6\. now we type ? and then input the start and end times as below with ampersand in between: [https: //www. youtub
+
 e. com/embed/qqpOS4VMdhQ?start=63&end=443] (https: //ww
+
 w. youtub
+
 e. com/embed/qqpOS4VMdhQ?start=63&end=443) 7\. if you now click on the link it will start at the start time of 1. 03 minute and end at
+
  7. 28 minutes
 
 8\. There will work well in our laptop/desktop browsers but when use our mobile/smartphone there is an inconsistency. There is a workaround for tha
+
 t.
 
 9\. Open the link in Chrome/Firefox or any other browser in mobile phone instead of Youtube app

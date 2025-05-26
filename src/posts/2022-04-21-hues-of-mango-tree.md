@@ -9,6 +9,9 @@ categories: ["nature"]
 Sun piercing through early morning and it makes a great day ahead
 
 ![] (/assets/images/hues-of-mango-tree-eb2d0530. jpg) ![] (/assets/images/hues-of-mango-tree-d8d8f5be. jpg) ![] (/assets/images/hues-of-mango-tree-4ee2e8b
+
 b. jpg) ![] (/assets/images/hues-of-mango-tree-54bf289
+
 c. jpg) ![] (/assets/images/hues-of-mango-tree-6d76f41
+
 b. jpg) Guten Morgen

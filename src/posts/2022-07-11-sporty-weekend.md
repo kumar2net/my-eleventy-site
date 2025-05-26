@@ -9,12 +9,17 @@ categories: ["sports"]
 What a weekend - humdinger of a Wimbledon finals & Austrian Grand Prix
 
 I for one look at Nick Kyrgios for his game and not weigh too much into his outbursts on court and flamboyant outlook to life. Only a return of the server of highest calibre, which Novak is, could have defeated him on this surfac
+
 e. His tweeners and underarm serves make an interesting watc
+
 h. Livewire he is
 
 I alternated watching Formula 1 too- getting my feet wet trying to understand the nuances - DRS, Red/ Yellow flag, Safety Car etc. .. I need to read more about Constructor
+
 s. Trivia: Red Bull racing 🏎️ ditched Honda as engine supplier recently and they now have their own - Red Bull Power Train (RBPT) https: //ww
+
 w. instagra
+
 m. com/p/Cf3E2GahfXs/?igshid=YmMyMTA2M2Y=
 
 NK influence
