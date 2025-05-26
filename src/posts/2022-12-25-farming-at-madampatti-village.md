@@ -8,9 +8,7 @@ categories: ["farming","food"]
 
 I believed Red soil means Fertile and that's how it looks here
 
-But I was quite surprised at the amount of Fertilizer the farmer used. He also sprays pesticides very ofte
-
-n. The stench from the fertilizer is a bit unbearable though
+But I was quite surprised at the amount of Fertilizer the farmer used. He also sprays pesticides very often. The stench from the fertilizer is a bit unbearable though
 
 ![From barren land to fledgling crop in a few months]
 
