@@ -1,7 +1,7 @@
 {
-  "totalPosts": 131,
-  "totalWords": 15076,
-  "averageWordsPerPost": 115,
+  "totalPosts": 132,
+  "totalWords": 15542,
+  "averageWordsPerPost": 118,
   "longestPost": {
     "title": "My experiment with ChatGPT",
     "wordCount": 569
@@ -21,7 +21,7 @@
       "score": -3
     },
     "postsBySentiment": {
-      "positive": 115,
+      "positive": 116,
       "neutral": 11,
       "negative": 5
     }
@@ -35,13 +35,13 @@
     "2012": 2,
     "2020": 12,
     "2022": 94,
-    "2024": 2,
+    "2024": 3,
     "2025": 1
   },
   "postsByMonth": {
     "January": 2,
     "February": 4,
-    "March": 16,
+    "March": 17,
     "April": 62,
     "May": 11,
     "June": 6,
@@ -67,6 +67,8 @@
     "nutrition": 4,
     "food": 4,
     "environment": 3,
+    "web development": 3,
+    "javascript": 3,
     "bsnl-broadband": 2,
     "india-mobile-and-internet-statistics": 2,
     "3g-mobile-services": 2,
@@ -78,8 +80,8 @@
     "science": 2,
     "farming": 2,
     "spring": 2,
-    "web development": 2,
-    "javascript": 2,
+    "analytics": 2,
+    "express": 2,
     "Kerala": 2,
     "sports table tennis CATTA": 2,
     "BSNL Broadband": 2,
@@ -101,8 +103,6 @@
     "week": 1,
     "Bitter gourd": 1,
     "neem flower": 1,
-    "analytics": 1,
-    "express": 1,
     "ISRO Space Rocketry": 1,
     "Coffee Chicory": 1,
     "CS Puram": 1,

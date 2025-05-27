@@ -1,9 +1,9 @@
 Blog Analytics Report
 ===================
 
-Total Posts: 131
-Total Words: 15076
-Average Words per Post: 115
+Total Posts: 132
+Total Words: 15542
+Average Words per Post: 118
 
 Longest Post:
 - My experiment with ChatGPT (569 words)
@@ -16,13 +16,13 @@ Sentiment Analysis:
 - Most Positive Post: Gang of Fifteen (Score: 66)
 - Most Negative Post: My fascination with Sports related quizzes (Score: -3)
 - Posts by Sentiment:
-  * Positive: 115
+  * Positive: 116
   * Neutral: 11
   * Negative: 5
 
 Posts by Year:
 - 2025: 1 posts
-- 2024: 2 posts
+- 2024: 3 posts
 - 2022: 94 posts
 - 2020: 12 posts
 - 2012: 2 posts
@@ -35,7 +35,7 @@ Posts by Year:
 Posts by Month:
 - January: 2 posts
 - February: 4 posts
-- March: 16 posts
+- March: 17 posts
 - April: 62 posts
 - May: 11 posts
 - June: 6 posts
@@ -61,6 +61,8 @@ Posts by Category:
 - nutrition: 4 posts
 - food: 4 posts
 - environment: 3 posts
+- web development: 3 posts
+- javascript: 3 posts
 - bsnl-broadband: 2 posts
 - india-mobile-and-internet-statistics: 2 posts
 - 3g-mobile-services: 2 posts
@@ -72,8 +74,8 @@ Posts by Category:
 - science: 2 posts
 - farming: 2 posts
 - spring: 2 posts
-- web development: 2 posts
-- javascript: 2 posts
+- analytics: 2 posts
+- express: 2 posts
 - Kerala: 2 posts
 - sports table tennis CATTA: 2 posts
 - BSNL Broadband: 2 posts
@@ -95,8 +97,6 @@ Posts by Category:
 - week: 1 posts
 - Bitter gourd: 1 posts
 - neem flower: 1 posts
-- analytics: 1 posts
-- express: 1 posts
 - ISRO Space Rocketry: 1 posts
 - Coffee Chicory: 1 posts
 - CS Puram: 1 posts
