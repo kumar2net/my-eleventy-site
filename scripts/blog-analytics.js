@@ -4,8 +4,8 @@ const matter = require('gray-matter');
 
 // Configuration
 const POSTS_DIR = path.join(__dirname, '../src/posts');
-const OUTPUT_FILE = path.join(__dirname, '../blog-analytics.txt');
-const JSON_OUTPUT_FILE = path.join(__dirname, '../blog-analytics.json');
+const OUTPUT_FILE = path.join(__dirname, '../src/assets/analytics/blog-analytics.txt');
+const JSON_OUTPUT_FILE = path.join(__dirname, '../src/assets/analytics/blog-analytics.json');
 
 // Statistics object
 const stats = {

@@ -125,7 +125,7 @@ permalink: "/analytics/"
 <script>
 async function loadAnalytics() {
     try {
-        const response = await fetch('/blog-analytics.json');
+        const response = await fetch('/assets/analytics/blog-analytics.json');
         const data = await response.json();
         
         // Update stats cards
