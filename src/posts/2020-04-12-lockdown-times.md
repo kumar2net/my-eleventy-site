@@ -6,4 +6,4 @@ tags: ["post","uncategorized"]
 categories: ["uncategorized"]
 ---
 
-Getting bored to death! Please suggest some games we can play together: Online multiplayer games - Scrabble, Chess etc. . which are free but not cluttered with too many ads A. Kumar
+Getting bored to death! Please suggest some games we can play together: Online multiplayer games - Scrabble, Chess etc.. which are free but not cluttered with too many ads A. Kumar

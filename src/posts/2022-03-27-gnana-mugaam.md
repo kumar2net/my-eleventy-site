@@ -12,7 +12,7 @@ Accepting myslef as what I am at this moment wholeheartedly is called GNAANAM �
 
 2\. அகம் புறம்
 
-There are two worlds - Psychological (Inner) & Physical (External) . Nothing to do for my inner self but have to do all my level best, initiate actions, tasks with out procastination for outer world needs
+There are two worlds - Psychological (Inner) & Physical (External). Nothing to do for my inner self but have to do all my level best, initiate actions, tasks with out procastination for outer world needs
 
 3\. Thought & Thinking
 
@@ -28,34 +28,18 @@ Need to dig more on this and understand
 
 Tid bits
 
-Pranayamam - for better overall health and fitness - a slight variation to diaphragm breathing I thought- inhale or feel air though throat - bloat the stomack and exhale via nose again. Park the tongue in upper jaw and close mouth and look straight - chin u
+Pranayamam - for better overall health and fitness - a slight variation to diaphragm breathing I thought- inhale or feel air though throat - bloat the stomack and exhale via nose again. Park the tongue in upper jaw and close mouth and look straight - chin up. No need to close eyes.
 
-p. No need to close eye
+## http://www.sribagavath.org/about-us/about-pravaagam/
 
-s. ## http: //ww
+The above are the notes I took during February 2022 Gnana Mugaam. Simple and fresh food provided and spic environment. Well conducted program. Location - foothills of Jarugu mountain range near Salem
 
-w. sribagavat
+![](/assets/images/gnana-mugaam-c8a656ea.jpg)
 
-h. org/about-us/about-pravaagam/
+![](/assets/images/gnana-mugaam-a08312d2.jpg)
 
-The above are the notes I took during February 2022 Gnana Mugaam. Simple and fresh food provided and spic environmen
+![](/assets/images/gnana-mugaam-895f9e61.jpg)
 
-t. Well conducted progra
+![](/assets/images/gnana-mugaam-ccc7647f.jpg)
 
-m. Location - foothills of Jarugu mountain range near Salem
-
-![Gnana Mugaam]
-
- 
-
-![Gnana Mugaam]
-
- 
-
-![Gnana Mugaam]
-
- 
-
-![Gnana Mugaam]
-
- Spick\*
+Spick\*

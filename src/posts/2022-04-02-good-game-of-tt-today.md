@@ -8,6 +8,6 @@ categories: ["fitness","health"]
 
 With the gang - Lax, Pradeep, ilango coach, Capt Vishy went away soon. More banter than actual play 🤦‍♂️🏓
 
-![Good Game Of Tt Today]
+![](/assets/images/good-game-of-tt-today-083cfd7a.jpg)
 
- Noisy fellows
+Noisy fellows

@@ -6,9 +6,9 @@ tags: ["post","tech-trends","tech_trends","ultrabook","volte"]
 categories: ["tech-trends"]
 ---
 
-- UltraBook
-- VoLTE
-- OpenFlow
-- Win8
-- Progress made by the 3rd Mobile Eco-system!
-- Gorilla Glass & Surface Computing.
+-   UltraBook
+-   VoLTE
+-   OpenFlow
+-   Win8
+-   Progress made by the 3rd Mobile Eco-system!
+-   Gorilla Glass & Surface Computing.

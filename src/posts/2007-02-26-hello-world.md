@@ -6,6 +6,4 @@ tags: ["post","uncategorized"]
 categories: ["uncategorized"]
 ---
 
-Welcome to [Kumar's Musings. ] (http: //wordpres
-
-s. com/)
+Welcome to [Kumar's Musings.](http://wordpress.com/)

@@ -6,14 +6,6 @@ tags: ["post","movies","bitcoin","crypto"]
 categories: ["movies"]
 ---
 
-[https: //www. netfli
+[https://www.netflix.com/in/title/81349029?preventIntent=true](https://www.netflix.com/in/title/81349029?preventIntent=true)
 
-x. com/in/title/81349029?preventIntent=true] (https: //ww
-
-w. netfli
-
-x. com/in/title/81349029?preventIntent=true) Very well made and seat edge thrille
-
-r. I learned about crypto a bi
-
-t.
+Very well made and seat edge thriller. I learned about crypto a bit.

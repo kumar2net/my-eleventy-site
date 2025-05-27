@@ -8,9 +8,7 @@ categories: ["sports"]
 
 I published this below post and then only the quiz idea stuck me
 
-https: //kumar2net. wordpres
-
-s. com/2022/04/20/musk-not-elon/
+https://kumar2net.wordpress.com/2022/04/20/musk-not-elon/
 
 The one quiz our champ 6 year old girl of Chandru struggled to answer during our Pind Restaurant outing is still fresh in my mind.
 

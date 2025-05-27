@@ -8,36 +8,20 @@ categories: ["health","sports"]
 
 This made my morning
 
-https: //www. instagra
-
-m. com/p/Cc1yPZ7NPVy/?igshid=YmMyMTA2M2Y=
+https://www.instagram.com/p/Cc1yPZ7NPVy/?igshid=YmMyMTA2M2Y=
 
 He used Penn tour balls and they had xxx marks on them and he explained that it is shipped that way so that it's not used for game play. I normally buy the standard cans so didn't know this
 
-![Dad Coach The Jani]
+![](/assets/images/dad-coach-the-jani-7a30b97d.jpg)
 
- It's been a long long time since I met Bhargav - an ever smiling guy from Gujju lan
+It's been a long long time since I met Bhargav - an ever smiling guy from Gujju land. He and his young family have adapted to Chennai extremely well and he loves south Indian food. I keep giving him references to get quality dhokla
 
-d. He and his young family have adapted to Chennai extremely well and he loves south Indian foo
+![](/assets/images/dad-coach-the-jani-adfe1202.jpg)
 
-d. I keep giving him references to get quality dhokla
+BJ in foreground and Saravanan in the background. Similar type of playing style. They can't hurt the ball 😔
 
-![Dad Coach The Jani]
+The portrait mode slightly fades you out. Sorry Saravanan. Another of our players - Prof Sayta- when he told me, he is teaching girls in Annai Vellankanni College, Saipapet mainly as a service to society I was keen to know more. He told me that most of the students have been orphaned with the pandemic wrecking havoc on their lives and are very poor. I will find a way to help a few of them atleast
 
- BJ in foreground and Saravanan in the background. Similar type of playing styl
-
-e. They can't hurt the ball 😔
-
-The portrait mode slightly fades you out. Sorry Saravana
-
-n. Another of our players - Prof Sayta- when he told me, he is teaching girls in Annai Vellankanni College, Saipapet mainly as a service to society I was keen to know mor
-
-e. He told me that most of the students have been orphaned with the pandemic wrecking havoc on their lives and are very poo
-
-r. I will find a way to help a few of them atleast
-
-Adikesavan the fittest ex. ISRO Director stalwart of our group, motivates us and sets a high pedesta
-
-l. He chases drops and the balls hit in the doubles alleys like a man possessed 👏
+Adikesavan the fittest ex. ISRO Director stalwart of our group, motivates us and sets a high pedestal. He chases drops and the balls hit in the doubles alleys like a man possessed 👏
 
 Great fun today folks 🌹

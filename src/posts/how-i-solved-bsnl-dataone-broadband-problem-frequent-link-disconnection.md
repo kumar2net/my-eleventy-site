@@ -1,0 +1,21 @@
+---
+layout: "post.njk"
+title: "How I solved BSNL Dataone Broadband problem - Frequent Link disconnection"
+date: "2007-09-08T23:18:35.000Z"
+permalink: "/2007/09/08/how-i-solved-bsnl-dataone-broadband-problem-frequent-link-disconnection/"
+categories: ["BSNL Broadband", "BSNL Broadband issues", "Dataone"]
+---
+
+![how-i-solved-bsnl-dataone-broadband-problem-frequent-link-disconnection](/assets/images/image5.jpg)
+
+I had frequent problem last week of ADSL Link in my modem/Router (Huawei MT-882) going down. The Link Led will turn green ( Link Disconnection)  from Orange (Link good)  and this cycle will repeat every few minutes.
+
+Repeated calls to BSNL call center - 1 800 424 1600 got me the  following answer -  Sir, if you are able to talk to me using the same telephone link which is connected to your ADSL modem means there is no problem in the cable and it should work. Similar point-of-view was also expressed by their JE/JTO from the exchange.
+
+I did my troubleshooting by logging in to the modem and figured out that the SNR- Signal-to-Noise Ratio has gone down to 5 dB from the earlier &gt; 30 dB, both on the uplink as well as the downlink.
+
+I went down to the ground floor of my building where the BSNL Distribution Box was located, identified my cable pair, cleaned the cable with knife blade (noticed that the cable lead was totally rusted) till I could see the colour of Copper in the cable and wrap'd a Electrical  Insulation tape (Steelgrip tape) on each of the leads.
+
+I came back up, switched ON the modem, the SNR got back to &gt; 30 dB (Please refer to the snapshot of the DSL router stat page) and I am living Happily ever after.
+
+Moral of the story: Phone communication uses Low frequency so we may get acceptable speech quality even with BAD physical connections, but for Broadband ADSL which uses the High frequency tones, good physical connection is an absolute must.<a title="Snapshot of ADSL modem - Huawei MT 882" href="http://kumar2net.wordpress.com/wp-content/uploads/2007/09/bsnl_dataone_snr.jpg"></a>

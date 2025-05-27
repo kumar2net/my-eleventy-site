@@ -8,14 +8,14 @@ categories: ["nature"]
 
 Sun piercing through early morning and it makes a great day ahead
 
-![Mango tree in morning light]
+![](/assets/images/hues-of-mango-tree-eb2d0530.jpg)
 
-![Mango tree branches]
+![](/assets/images/hues-of-mango-tree-d8d8f5be.jpg)
 
-![Mango tree leaves]
+![](/assets/images/hues-of-mango-tree-4ee2e8bb.jpg)
 
-![Mango tree canopy]
+![](/assets/images/hues-of-mango-tree-54bf289c.jpg)
 
-![Mango tree silhouette]
+![](/assets/images/hues-of-mango-tree-6d76f41b.jpg)
 
 Guten Morgen

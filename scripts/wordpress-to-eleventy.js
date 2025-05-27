@@ -6,12 +6,15 @@ const sanitize = require('sanitize-filename');
 const mkdirp = require('mkdirp');
 const he = require('he');
 const https = require('https');
+const http = require('http');
 const crypto = require('crypto');
 const { promisify } = require('util');
+const { readdir, unlink } = require('fs/promises');
 
 // Promisify fs functions
 const writeFile = promisify(fs.writeFile);
 const mkdir = promisify(fs.mkdir);
+const readFile = promisify(fs.readFile);
 
 // Initialize HTML to Markdown converter
 const turndownService = new TurndownService({
@@ -98,10 +101,25 @@ function createSlug(str) {
     .replace(/-+/g, '-');
 }
 
-// Function to download an image
+// Function to download an image (supports both http and https and follows redirects)
 async function downloadImage(url, filename) {
   return new Promise((resolve, reject) => {
-    https.get(url, response => {
+    const client = url.startsWith('https') ? https : http;
+    client.get(url, response => {
+      if (response.statusCode === 301 || response.statusCode === 302) {
+        const redirectUrl = response.headers.location;
+        if (!redirectUrl) {
+          reject(new Error('Redirect location not found'));
+          return;
+        }
+        downloadImage(redirectUrl, filename).then(resolve).catch(reject);
+        return;
+      }
+      if (response.statusCode === 404) {
+        console.warn(`Image not found (404): ${url}`);
+        resolve(null); // Return null to indicate the image was not downloaded
+        return;
+      }
       if (response.statusCode !== 200) {
         reject(new Error(`Failed to download image: ${response.statusCode}`));
         return;
@@ -137,7 +155,7 @@ async function processImages(markdown, postSlug) {
 
   // Extract all images
   while ((match = imageRegex.exec(markdown)) !== null) {
-    const [fullMatch, alt, id, _, url] = match;
+    const [fullMatch, alt, id, url] = [match[0], match[1], match[2], match[4]];
     images.push({ fullMatch, alt, id, url });
   }
 
@@ -147,41 +165,101 @@ async function processImages(markdown, postSlug) {
       // Generate filename from URL
       const urlParts = image.url.split('/');
       const originalFilenameFromUrl = urlParts[urlParts.length - 1].split('?')[0];
-      const localImagePath = path.join(imagesDir, originalFilenameFromUrl);
+      const ext = path.extname(originalFilenameFromUrl) || '.jpg';
+      const imageFilename = `${postSlug}-${image.id.substring(0, 8)}${ext}`;
+      const downloadPath = path.join(imagesDir, imageFilename);
+      const relativeImagePath = `/assets/images/${imageFilename}`;
 
-      if (fs.existsSync(localImagePath)) {
-        console.log(`Found local image: ${originalFilenameFromUrl}`);
-        processedMarkdown = processedMarkdown.replace(
-          image.fullMatch,
-          `![${image.alt}](/assets/images/${originalFilenameFromUrl})`
-        );
-      } else {
-        const ext = path.extname(originalFilenameFromUrl) || '.jpg';
-        const imageFilename = `${postSlug}-${image.id.substring(0, 8)}${ext}`;
-        const downloadPath = path.join(imagesDir, imageFilename);
-        const relativeImagePathForDownload = `/assets/images/${imageFilename}`;
-
-        // Download image
-        await downloadImage(image.url, downloadPath);
+      // Download image
+      await downloadImage(image.url, downloadPath);
+      if (fs.existsSync(downloadPath)) {
         console.log(`Downloaded image: ${imageFilename}`);
-
         // Replace in markdown
         processedMarkdown = processedMarkdown.replace(
           image.fullMatch,
-          `![${image.alt}](${relativeImagePathForDownload})`
+          `![${image.alt}](${relativeImagePath})`
+        );
+      } else {
+        console.warn(`Image not downloaded: ${image.url}`);
+        // Remove the broken image reference and insert a warning
+        processedMarkdown = processedMarkdown.replace(
+          image.fullMatch,
+          `> **Image not found:** ${image.url}`
         );
       }
     } catch (error) {
       console.error(`Failed to process image ${image.url}:`, error.message);
-      // Keep original URL if download fails
+      // Remove the broken image reference and insert a warning
       processedMarkdown = processedMarkdown.replace(
         image.fullMatch,
-        `![${image.alt}](${image.url})`
+        `> **Image not found:** ${image.url}`
       );
     }
   }
 
   return processedMarkdown;
+}
+
+// Function to process a post
+async function processPost(post) {
+  const title = post.title[0]._;
+  const content = post.content[0]._;
+  const date = new Date(post.pubDate[0]);
+  const slug = post['wp:post_name'][0];
+  const categories = post.category.map(cat => cat._);
+  const tags = post['wp:postmeta']
+    .filter(meta => meta['wp:meta_key'][0] === '_wp_post_tags')
+    .map(meta => meta['wp:meta_value'][0])
+    .filter(Boolean);
+
+  // Process images in content
+  const processedContent = await processImages(content, slug);
+
+  // Create frontmatter
+  const frontmatter = {
+    title,
+    date: date.toISOString(),
+    categories,
+    tags,
+    layout: 'post.njk'
+  };
+
+  // Create markdown content
+  const markdown = `---
+${Object.entries(frontmatter)
+  .map(([key, value]) => {
+    if (Array.isArray(value)) {
+      return `${key}:\n${value.map(v => `  - ${v}`).join('\n')}`;
+    }
+    return `${key}: ${value}`;
+  })
+  .join('\n')}
+---
+
+${processedContent}`;
+
+  // Write markdown file
+  const filename = `${date.toISOString().split('T')[0]}-${slug}.md`;
+  const filepath = path.join(postsDir, filename);
+  await writeFile(filepath, markdown);
+  console.log(`Created ${filename}`);
+
+  // Remove any duplicate files with the same slug but different date format
+  const files = await readdir(postsDir);
+  for (const file of files) {
+    if (file !== filename && file.endsWith(`-${slug}.md`)) {
+      await unlink(path.join(postsDir, file));
+      console.log(`Removed duplicate file ${file}`);
+    }
+  }
+
+  // Remove any files with the old image paths
+  for (const file of files) {
+    if (file.startsWith('image') || file.match(/^[0-9]+\.(jpg|png|jpeg)$/)) {
+      await unlink(path.join(postsDir, file));
+      console.log(`Removed old image file ${file}`);
+    }
+  }
 }
 
 // Read WordPress export XML file

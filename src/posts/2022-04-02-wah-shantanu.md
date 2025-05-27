@@ -6,12 +6,4 @@ tags: ["post","music","shantanu"]
 categories: ["music"]
 ---
 
-Loved every bit of it. Check out Enga Pore De by Shanthanu Bhagyaraj on Amazon Music [https: //musi
-
-c. amazo
-
-n. in/albums/B08P6F155D?trackAsin=B08P66B5K6&ref=dm\_sh\_f9I4eBOx2r3dKqiagf9hRRabb] (https: //musi
-
-c. amazo
-
-n. in/albums/B08P6F155D?trackAsin=B08P66B5K6&ref=dm_sh_f9I4eBOx2r3dKqiagf9hRRabb)
+Loved every bit of it. Check out Enga Pore De by Shanthanu Bhagyaraj on Amazon Music [https://music.amazon.in/albums/B08P6F155D?trackAsin=B08P66B5K6&ref=dm\_sh\_f9I4eBOx2r3dKqiagf9hRRabb](https://music.amazon.in/albums/B08P6F155D?trackAsin=B08P66B5K6&ref=dm_sh_f9I4eBOx2r3dKqiagf9hRRabb)

@@ -14,10 +14,8 @@ I wanted to make a cold cocoa drink but found it hard to mix the powder which ju
 
 Then I hit on the idea - what our gym boys use for protein shakes and viola my issue is fixed and got my frothing drink. The gooseberry seed shaped ball is the secret part of the shaker and does give a whirl
 
-![Gym Shaker]
+![](/assets/images/gym-shaker-1c1afbad.jpg)
 
- 
+![](/assets/images/gym-shaker-c0c5c109.jpg)
 
-![Gym Shaker]
-
- That's Portuguese
+That's Portuguese
