@@ -1,11 +1,15 @@
 const fs = require('fs');
 const path = require('path');
 const matter = require('gray-matter');
+const Sentiment = require('sentiment');
 
 // Configuration
 const POSTS_DIR = path.join(__dirname, '../src/posts');
 const OUTPUT_FILE = path.join(__dirname, '../src/assets/analytics/blog-analytics.txt');
 const JSON_OUTPUT_FILE = path.join(__dirname, '../src/assets/analytics/blog-analytics.json');
+
+// Initialize sentiment analyzer
+const sentiment = new Sentiment();
 
 // Statistics object
 const stats = {
@@ -18,7 +22,17 @@ const stats = {
     longestPost: { title: '', wordCount: 0 },
     shortestPost: { title: '', wordCount: Infinity },
     categories: new Set(),
-    tags: new Set()
+    tags: new Set(),
+    sentimentAnalysis: {
+        averageScore: 0,
+        mostPositive: { title: '', score: -Infinity },
+        mostNegative: { title: '', score: Infinity },
+        postsBySentiment: {
+            positive: 0,
+            neutral: 0,
+            negative: 0
+        }
+    }
 };
 
 // Helper function to count words in markdown content
@@ -38,6 +52,7 @@ function countWords(content) {
 // Process all markdown files in the posts directory
 function analyzePosts() {
     const files = fs.readdirSync(POSTS_DIR);
+    let totalSentimentScore = 0;
     
     files.forEach(file => {
         if (file.endsWith('.md')) {
@@ -82,11 +97,41 @@ function analyzePosts() {
             if (wordCount < stats.shortestPost.wordCount) {
                 stats.shortestPost = { title: data.title, wordCount };
             }
+
+            // Analyze sentiment
+            const sentimentResult = sentiment.analyze(markdownContent);
+            totalSentimentScore += sentimentResult.score;
+
+            // Update most positive/negative posts
+            if (sentimentResult.score > stats.sentimentAnalysis.mostPositive.score) {
+                stats.sentimentAnalysis.mostPositive = {
+                    title: data.title,
+                    score: sentimentResult.score
+                };
+            }
+            if (sentimentResult.score < stats.sentimentAnalysis.mostNegative.score) {
+                stats.sentimentAnalysis.mostNegative = {
+                    title: data.title,
+                    score: sentimentResult.score
+                };
+            }
+
+            // Categorize post by sentiment
+            if (sentimentResult.score > 0) {
+                stats.sentimentAnalysis.postsBySentiment.positive++;
+            } else if (sentimentResult.score < 0) {
+                stats.sentimentAnalysis.postsBySentiment.negative++;
+            } else {
+                stats.sentimentAnalysis.postsBySentiment.neutral++;
+            }
         }
     });
     
     // Calculate average words per post
     stats.averageWordsPerPost = Math.round(stats.totalWords / stats.totalPosts);
+    
+    // Calculate average sentiment score
+    stats.sentimentAnalysis.averageScore = Math.round(totalSentimentScore / stats.totalPosts);
 }
 
 // Generate report
@@ -103,6 +148,15 @@ function generateReport() {
     
     report += 'Shortest Post:\n';
     report += `- ${stats.shortestPost.title} (${stats.shortestPost.wordCount} words)\n\n`;
+    
+    report += 'Sentiment Analysis:\n';
+    report += `- Average Sentiment Score: ${stats.sentimentAnalysis.averageScore}\n`;
+    report += `- Most Positive Post: ${stats.sentimentAnalysis.mostPositive.title} (Score: ${stats.sentimentAnalysis.mostPositive.score})\n`;
+    report += `- Most Negative Post: ${stats.sentimentAnalysis.mostNegative.title} (Score: ${stats.sentimentAnalysis.mostNegative.score})\n`;
+    report += `- Posts by Sentiment:\n`;
+    report += `  * Positive: ${stats.sentimentAnalysis.postsBySentiment.positive}\n`;
+    report += `  * Neutral: ${stats.sentimentAnalysis.postsBySentiment.neutral}\n`;
+    report += `  * Negative: ${stats.sentimentAnalysis.postsBySentiment.negative}\n\n`;
     
     report += 'Posts by Year:\n';
     Object.entries(stats.postsByYear)
@@ -150,6 +204,7 @@ function generateReport() {
         averageWordsPerPost: stats.averageWordsPerPost,
         longestPost: stats.longestPost,
         shortestPost: stats.shortestPost,
+        sentimentAnalysis: stats.sentimentAnalysis,
         postsByYear: Object.entries(stats.postsByYear)
             .sort(([a], [b]) => b - a)
             .reduce((acc, [year, count]) => {

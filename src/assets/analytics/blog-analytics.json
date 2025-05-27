@@ -10,6 +10,22 @@
     "title": "Rake Sift & cleaning machine at Thiruvanmiyur beach",
     "wordCount": 0
   },
+  "sentimentAnalysis": {
+    "averageScore": 10,
+    "mostPositive": {
+      "title": "Gang of Fifteen",
+      "score": 66
+    },
+    "mostNegative": {
+      "title": "My fascination with Sports related quizzes",
+      "score": -3
+    },
+    "postsBySentiment": {
+      "positive": 115,
+      "neutral": 11,
+      "negative": 5
+    }
+  },
   "postsByYear": {
     "2007": 8,
     "2008": 4,

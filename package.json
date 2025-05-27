@@ -190,6 +190,7 @@
     "section-matter": "^1.0.0",
     "semver": "^7.7.2",
     "semver-compare": "^1.0.0",
+    "sentiment": "^5.0.2",
     "shebang-command": "^2.0.0",
     "shebang-regex": "^3.0.0",
     "slash": "^1.0.0",

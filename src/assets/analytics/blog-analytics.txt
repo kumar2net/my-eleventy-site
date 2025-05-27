@@ -11,6 +11,15 @@ Longest Post:
 Shortest Post:
 - Rake Sift & cleaning machine at Thiruvanmiyur beach (0 words)
 
+Sentiment Analysis:
+- Average Sentiment Score: 10
+- Most Positive Post: Gang of Fifteen (Score: 66)
+- Most Negative Post: My fascination with Sports related quizzes (Score: -3)
+- Posts by Sentiment:
+  * Positive: 115
+  * Neutral: 11
+  * Negative: 5
+
 Posts by Year:
 - 2025: 1 posts
 - 2024: 2 posts
