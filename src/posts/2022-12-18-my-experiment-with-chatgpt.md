@@ -1,10 +1,9 @@
 ---
 layout: post.njk
-title: "My Experiment with ChatGPT"
-date: 2022-12-18
-tags: ["post", "ai", "chatgpt", "technology"]
-categories: ["technology", "ai"]
-description: "Exploring the capabilities and limitations of ChatGPT through personal experimentation and use cases."
+title: My experiment with ChatGPT
+date: 2022-12-18T06:40:54.000Z
+tags: ["post","tech-trends","ai-chatgpt"]
+categories: ["tech-trends"]
 ---
 
 Artificial Intelligence & Deep learning has taken a giant Leap indeed and I am enthralled experimenting with ChatGPT. What's CHATGPT? In it's third version GPT-3, or the third generation Generative Pre-trainedTransformer, is a neural network machine learning model trained using internet data to generate any type of text. Developed by OpenAl - Elon Musk is the co-founder, it requires a small amount of input text to generate large volumes of relevant and sophisticated machine- generated text

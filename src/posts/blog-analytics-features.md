@@ -1,8 +1,7 @@
 ---
-layout: post.njk
 title: "Enhancing Blog Analytics with Sentiment Analysis"
 date: 2024-03-19
-tags: ["post", "analytics", "javascript", "nodejs"]
+tags: ["post"]
 categories: ["web development", "javascript", "analytics", "express"]
 description: "Learn how to add sentiment analysis and advanced analytics features to your blog using Node.js and Express."
 ---

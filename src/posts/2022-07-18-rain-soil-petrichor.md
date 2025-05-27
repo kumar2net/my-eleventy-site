@@ -1,10 +1,9 @@
 ---
 layout: post.njk
 title: "Rain, Soil & Petrichor"
-date: 2022-07-18
-tags: ["post", "nature", "rain", "petrichor"]
-categories: ["nature", "personal"]
-description: "A reflection on the beautiful connection between rain, soil, and the distinctive scent of petrichor."
+date: 2022-07-18T13:49:33.000Z
+tags: ["post","nature","zen","soil-monsoon-rains-petrichor"]
+categories: ["nature","zen"]
 ---
 
 The smell of the first rain on fertile soil - Petrichor intoxicated me. I read that perfume/ attars are available too. Subsequently South West monsoon intensity picked up and we had a good spell during the past fortnight

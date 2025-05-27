@@ -7,8 +7,7 @@
     "build": "eleventy",
     "start": "eleventy --serve",
     "debug": "DEBUG=* eleventy",
-    "fix-images": "node scripts/fix-image-refs.js",
-    "deploy": "netlify deploy --prod"
+    "fix-images": "node scripts/fix-image-refs.js"
   },
   "keywords": [],
   "author": "",

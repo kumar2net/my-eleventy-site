@@ -90,18 +90,11 @@ module.exports = function(eleventyConfig) {
         return Array.from(tagSet).sort();
     });
 
-    // Configure posts collection with explicit directory and permalink
+    // Configure posts collection
     eleventyConfig.addCollection("post", function(collection) {
-        return collection.getFilteredByGlob("src/posts/**/*.md")
-            .filter(post => post.data.tags && post.data.tags.includes("post"))
-            .sort((a, b) => b.date - a.date)
-            .map(post => {
-                // Add permalink if not already set
-                if (!post.data.permalink) {
-                    post.data.permalink = `/posts/${post.fileSlug}/`;
-                }
-                return post;
-            });
+        return collection.getFilteredByTag("post").sort((a, b) => {
+            return b.date - a.date;
+        });
     });
 
     // Add currentYear shortcode
@@ -111,6 +104,7 @@ module.exports = function(eleventyConfig) {
 
     // Generate search index
     eleventyConfig.addCollection("searchIndex", async function(collection) {
+        // Create the index
         const index = elasticlunr(function() {
             this.addField("title");
             this.addField("content");
@@ -120,15 +114,19 @@ module.exports = function(eleventyConfig) {
             this.setRef("url");
         });
 
-        for (const page of collection.getFilteredByGlob("src/posts/**/*.md")) {
+        // Add documents to the index
+        for (const page of collection.getAll()) {
             if (page.url && page.template?.inputPath?.endsWith('.md')) {
                 try {
+                    // Get the raw content of the markdown file
                     const content = await fs.promises.readFile(page.template.inputPath, 'utf8');
+                    // Remove front matter and get only the content
                     const contentWithoutFrontMatter = content.replace(/^---[\s\S]*?---\n/, '');
                     
+                    // Create excerpt from content (first 200 characters)
                     const excerpt = contentWithoutFrontMatter
-                        .replace(/[#*`_]/g, '')
-                        .replace(/\n/g, ' ')
+                        .replace(/[#*`_]/g, '') // Remove markdown syntax
+                        .replace(/\n/g, ' ') // Replace newlines with spaces
                         .trim()
                         .substring(0, 200);
 
@@ -141,6 +139,7 @@ module.exports = function(eleventyConfig) {
                         excerpt: excerpt
                     };
 
+                    // Only add if we have some content to search
                     if (doc.content || doc.title || doc.description) {
                         index.addDoc(doc);
                         console.log(`Added to search index: ${doc.title}`);
@@ -151,11 +150,13 @@ module.exports = function(eleventyConfig) {
             }
         }
 
+        // Write the index to a file
         const outputDir = path.join(__dirname, "_site");
         if (!fs.existsSync(outputDir)) {
             fs.mkdirSync(outputDir, { recursive: true });
         }
         
+        // Serialize the index to JSON
         const indexJson = JSON.stringify(index.toJSON());
         fs.writeFileSync(path.join(outputDir, "search-index.json"), indexJson);
         console.log('Search index generated successfully');
@@ -169,8 +170,7 @@ module.exports = function(eleventyConfig) {
             input: "src",
             output: "_site",
             includes: "_includes",
-            layouts: "_layouts",
-            data: "_data"
+            layouts: "_layouts"
         },
         templateFormats: ["md", "njk", "html"],
         markdownTemplateEngine: "njk",
