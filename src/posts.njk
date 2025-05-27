@@ -1,0 +1,118 @@
+---
+layout: base.njk
+title: Blog Posts
+permalink: /posts/
+---
+
+<section class="posts-page">
+    <h1>Blog Posts</h1>
+    
+    <div class="posts-grid">
+        {%- for post in collections.post | reverse -%}
+        <article class="post-card">
+            <h2><a href="{{ post.url | url }}">{{ post.data.title }}</a></h2>
+            <div class="post-meta">
+                <time datetime="{{ post.date | dateIso }}">{{ post.date | dateReadable }}</time>
+                {%- if post.data.tags -%}
+                <div class="tags">
+                    {%- for tag in post.data.tags -%}
+                        {%- if tag != "post" -%}
+                        <span class="tag">{{ tag }}</span>
+                        {%- endif -%}
+                    {%- endfor -%}
+                </div>
+                {%- endif -%}
+            </div>
+            {%- if post.data.description -%}
+            <p>{{ post.data.description }}</p>
+            {%- endif -%}
+            <a href="{{ post.url | url }}" class="read-more">Read More →</a>
+        </article>
+        {%- endfor -%}
+    </div>
+</section>
+
+<style>
+    .posts-page {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+    }
+
+    .posts-page h1 {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .posts-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 2rem;
+    }
+
+    .post-card {
+        background: var(--background-color);
+        border-radius: 0.5rem;
+        padding: 1.5rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s ease;
+    }
+
+    .post-card:hover {
+        transform: translateY(-4px);
+    }
+
+    .post-card h2 {
+        margin: 0 0 1rem;
+        font-size: 1.5rem;
+    }
+
+    .post-card h2 a {
+        color: var(--text-color);
+        text-decoration: none;
+    }
+
+    .post-card h2 a:hover {
+        color: var(--primary-color);
+    }
+
+    .post-meta {
+        font-size: 0.9rem;
+        color: var(--text-muted);
+        margin-bottom: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .tags {
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+    }
+
+    .tag {
+        background: var(--secondary-background);
+        padding: 0.25rem 0.75rem;
+        border-radius: 1rem;
+        font-size: 0.8rem;
+    }
+
+    .read-more {
+        display: inline-block;
+        margin-top: 1rem;
+        color: var(--primary-color);
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    .read-more:hover {
+        text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+        .posts-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style> 

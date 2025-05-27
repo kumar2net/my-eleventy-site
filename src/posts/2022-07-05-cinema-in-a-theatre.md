@@ -1,9 +1,10 @@
 ---
 layout: post.njk
-title: Cinema in a theatre
-date: 2022-07-05T00:20:44.000Z
-tags: ["post","movies","science","isro-space-rocketry"]
-categories: ["movies","science"]
+title: "Cinema in a Theatre"
+date: 2022-07-05
+tags: ["post", "cinema", "movies", "entertainment"]
+categories: ["entertainment", "personal"]
+description: "A personal experience of watching movies in a traditional theatre setting."
 ---
 
 It's a long long time really. Since I had visited ISRO ( Indian Space Centre Organisation) centres at SHAR, Sriharikota & LPSC Valiamala, Thiruvananthapuram, Kerala during my work life, this one: Rocketry - The Nambi Effect is a must see for me.

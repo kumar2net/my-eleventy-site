@@ -1,9 +1,10 @@
 ---
 layout: post.njk
-title: Badminton morning
-date: 2022-06-18T03:55:09.000Z
-tags: ["post","fitness","nature","sports","flower-badminton"]
-categories: ["fitness","nature","sports"]
+title: "Badminton Morning"
+date: 2022-06-18
+tags: ["post", "badminton", "sports", "fitness"]
+categories: ["sports", "personal"]
+description: "A morning badminton session, sharing the experience and benefits of early morning sports activities."
 ---
 
 Got a call from Manchester club yesterday evening that 7-8 am slot is open and was overjoyed. Played 2 competitive sets this morning with my new Yonex ArcSaber Taufik Hidayak racquet 🎾 I requested the club owner to try and put in a table tennis facility as I know there are a couple of good players in the community with whom I can spar with 🏓

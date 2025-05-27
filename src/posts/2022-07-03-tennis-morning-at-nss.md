@@ -1,9 +1,10 @@
 ---
 layout: post.njk
-title: Tennis Morning at NSS
-date: 2022-07-03T06:26:48.000Z
-tags: ["post","fitness","sports","nss","tennis"]
-categories: ["fitness","sports"]
+title: "Tennis Morning at NSS"
+date: 2022-07-03
+tags: ["post", "tennis", "sports", "fitness"]
+categories: ["sports", "personal"]
+description: "A morning tennis session at NSS, sharing the experience and benefits of early morning sports activities."
 ---
 
 Good workout at National Sports School, Ajjanoor, Vadavalli today. The drive is a bit longer but that's the nearest I could find after a lot of googling and cold calling. The coach Muthu fed a good amount of balls for mid court, baseline rallies and volley practise for 20 odd minutes

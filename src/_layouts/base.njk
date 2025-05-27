@@ -1,59 +1,76 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }} | My Site</title>
+    <title>{% if title %}{{ title }} | {% endif %}{{ site.title }}</title>
     
-    {# Meta tags for SEO #}
-    <meta name="description" content="{{ description or metadata.description }}">
-    <meta property="og:title" content="{{ title }} | My Site">
-    <meta property="og:description" content="{{ description or metadata.description }}">
-    <meta property="og:image" content="{{ metadata.url }}{{ image or metadata.image }}">
-    <meta property="og:url" content="{{ metadata.url }}{{ page.url }}">
-    <meta name="twitter:card" content="summary_large_image">
+    <!-- Meta Tags -->
+    <meta name="description" content="{{ description | default(site.description) }}">
+    <meta name="author" content="{{ site.author.name }}">
     
-    {# RSS Feed #}
-    <link rel="alternate" href="/feed.xml" type="application/atom+xml" title="RSS Feed">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ page.url | absoluteUrl }}">
+    <meta property="og:title" content="{{ title }}">
+    <meta property="og:description" content="{{ description | default(site.description) }}">
+    <meta property="og:image" content="{{ site.url }}/img/og-image.jpg">
     
-    {# Styles #}
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ page.url | absoluteUrl }}">
+    <meta property="twitter:title" content="{{ title }}">
+    <meta property="twitter:description" content="{{ description | default(site.description) }}">
+    <meta property="twitter:image" content="{{ site.url }}/img/og-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/img/favicon.png">
+    
+    <!-- Styles -->
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/prism-theme.css">
+    <link rel="stylesheet" href="/css/responsive.css">
     
-    {# Scripts #}
-    <script src="https://cdn.jsdelivr.net/npm/elasticlunr@0.9.5/elasticlunr.min.js"></script>
-    <script src="/js/search.js" defer></script>
-    <script src="/js/theme.js" defer></script>
+    <!-- Preload Critical Assets -->
+    <link rel="preload" href="/css/style.css" as="style">
+    <link rel="preload" href="/css/responsive.css" as="style">
+    <link rel="preload" href="/js/lazy-load.js" as="script">
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="/">Home</a>
-            <a href="/blog">Blog</a>
-            <a href="/projects">Projects</a>
-            <a href="/products">Products</a>
-            <a href="/tags">Tags</a>
-            
-            {# Dark mode toggle #}
-            <button id="theme-toggle" aria-label="Toggle dark mode">
-                🌓
-            </button>
-            
-            {# Search bar #}
-            <div class="search-container">
-                <input type="search" id="search-input" placeholder="Search...">
-                <div id="search-results"></div>
+    <header class="site-header">
+        <nav class="nav">
+            <a href="/" class="logo">{{ site.title }}</a>
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="/blog">Blog</a>
+                <a href="/about">About</a>
+                <a href="/contact">Contact</a>
             </div>
         </nav>
     </header>
 
-    <main>
+    <main class="content">
         {{ content | safe }}
     </main>
 
-    <footer>
-        <p>&copy; {% currentYear %} My Site. All rights reserved.</p>
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; {{ currentYear() }} {{ site.title }}. All rights reserved.</p>
+            <div class="social-links">
+                {% if site.social.github %}
+                <a href="https://github.com/{{ site.social.github }}" target="_blank" rel="noopener noreferrer">GitHub</a>
+                {% endif %}
+                {% if site.social.twitter %}
+                <a href="https://twitter.com/{{ site.social.twitter }}" target="_blank" rel="noopener noreferrer">Twitter</a>
+                {% endif %}
+                {% if site.social.linkedin %}
+                <a href="https://linkedin.com/in/{{ site.social.linkedin }}" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                {% endif %}
+            </div>
+        </div>
     </footer>
+
+    <!-- Scripts -->
+    <script src="/js/lazy-load.js" defer></script>
 </body>
 </html>
 

@@ -1,9 +1,10 @@
 ---
 layout: post.njk
-title: "Weather & tennis"
-date: 2022-05-11T02:36:40.000Z
-tags: ["post","fitness","sports","sportswear","tennis"]
-categories: ["fitness","sports"]
+title: "Weather & Tennis"
+date: 2022-05-11
+tags: ["post", "tennis", "sports", "weather"]
+categories: ["sports", "personal"]
+description: "How weather conditions affect tennis play and the experience of playing in different weather conditions."
 ---
 
 I always complain to whoever will listen to: about how hot Chennai weather is - hot, hotter, hottest 🔥

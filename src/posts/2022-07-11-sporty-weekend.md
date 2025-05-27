@@ -1,9 +1,10 @@
 ---
 layout: post.njk
-title: Sporty weekend
-date: 2022-07-11T12:22:31.000Z
-tags: ["post","sports","wimbledon-f1"]
-categories: ["sports"]
+title: "Sporty Weekend"
+date: 2022-07-11
+tags: ["post", "sports", "tennis", "badminton"]
+categories: ["sports", "personal"]
+description: "A weekend filled with sports activities, including tennis and badminton matches."
 ---
 
 What a weekend - humdinger of a Wimbledon finals & Austrian Grand Prix
