@@ -1,0 +1,475 @@
+Blog Analytics Report
+===================
+
+Total Posts: 131
+Total Words: 15076
+Average Words per Post: 115
+
+Longest Post:
+- My experiment with ChatGPT (569 words)
+
+Shortest Post:
+- Rake Sift & cleaning machine at Thiruvanmiyur beach (0 words)
+
+Posts by Year:
+- 2025: 1 posts
+- 2024: 2 posts
+- 2022: 94 posts
+- 2020: 12 posts
+- 2012: 2 posts
+- 2011: 2 posts
+- 2010: 4 posts
+- 2009: 2 posts
+- 2008: 4 posts
+- 2007: 8 posts
+
+Posts by Month:
+- January: 2 posts
+- February: 4 posts
+- March: 16 posts
+- April: 62 posts
+- May: 11 posts
+- June: 6 posts
+- July: 14 posts
+- August: 2 posts
+- September: 7 posts
+- October: 3 posts
+- December: 4 posts
+
+Posts by Category:
+- sports: 26 posts
+- fitness: 17 posts
+- health: 15 posts
+- travels: 8 posts
+- zen: 8 posts
+- nature: 8 posts
+- tennis: 8 posts
+- uncategorized: 7 posts
+- Uncategorized: 7 posts
+- summer: 6 posts
+- movies: 4 posts
+- drink: 4 posts
+- nutrition: 4 posts
+- food: 4 posts
+- environment: 3 posts
+- bsnl-broadband: 2 posts
+- india-mobile-and-internet-statistics: 2 posts
+- 3g-mobile-services: 2 posts
+- tech-trends: 2 posts
+- music: 2 posts
+- shopping: 2 posts
+- festival: 2 posts
+- fruits: 2 posts
+- science: 2 posts
+- farming: 2 posts
+- spring: 2 posts
+- web development: 2 posts
+- javascript: 2 posts
+- Kerala: 2 posts
+- sports table tennis CATTA: 2 posts
+- BSNL Broadband: 2 posts
+- India mobile and internet statistics: 2 posts
+- 3G Mobile Services: 2 posts
+- tech trends: 2 posts
+- Music: 2 posts
+- wireless-internet: 1 posts
+- india-internet: 1 posts
+- white-space-spectrum: 1 posts
+- android-youtube-video: 1 posts
+- kerala: 1 posts
+- chennai: 1 posts
+- party: 1 posts
+- web-development: 1 posts
+- flower badminton: 1 posts
+- quiet: 1 posts
+- activity: 1 posts
+- week: 1 posts
+- Bitter gourd: 1 posts
+- neem flower: 1 posts
+- analytics: 1 posts
+- express: 1 posts
+- ISRO Space Rocketry: 1 posts
+- Coffee Chicory: 1 posts
+- CS Puram: 1 posts
+- Native: 1 posts
+- Palakkad: 1 posts
+- android: 1 posts
+- Android YouTube video: 1 posts
+- customize youtube start end times: 1 posts
+- desktop browser: 1 posts
+- video url editing: 1 posts
+- tennis coach dad teenagers: 1 posts
+- debugging: 1 posts
+- feedback: 1 posts
+- the hindu: 1 posts
+- downtown: 1 posts
+- COVID: 1 posts
+- Lifestyle: 1 posts
+- soil: 1 posts
+- Fitbit charge5: 1 posts
+- wearable: 1 posts
+- Flea market: 1 posts
+- tennis sports: 1 posts
+- SriBagavath Spritual introspection: 1 posts
+- gym shaker cocoa: 1 posts
+- thirussur: 1 posts
+- hibiscus flower: 1 posts
+- BSNL Broadband issues: 1 posts
+- Dataone: 1 posts
+- Access Point: 1 posts
+- Airtel: 1 posts
+- Bharti: 1 posts
+- Broadband: 1 posts
+- BSNL: 1 posts
+- Centrino laptop: 1 posts
+- Home wireless network: 1 posts
+- MTNL: 1 posts
+- Secure Wireless network: 1 posts
+- WiFi: 1 posts
+- Wireless Internet: 1 posts
+- Wireless Router: 1 posts
+- mango tree: 1 posts
+- hyperlapse gondola: 1 posts
+- India Broadband: 1 posts
+- India Internet data: 1 posts
+- india internet statistics: 1 posts
+- India mobile data: 1 posts
+- India mobile statistics: 1 posts
+- India Internet: 1 posts
+- 3G: 1 posts
+- apps: 1 posts
+- HSPA: 1 posts
+- iPad: 1 posts
+- kindle: 1 posts
+- mobile data plans: 1 posts
+- Mobile internet India: 1 posts
+- tablets: 1 posts
+- iphone 3gs: 1 posts
+- teracom: 1 posts
+- type 2 modem: 1 posts
+- Wi-Fi: 1 posts
+- WPA: 1 posts
+- India telecom statistics mobile landline: 1 posts
+- Ai CHATGPT: 1 posts
+- quiz tennis: 1 posts
+- neem tree: 1 posts
+- peanut tennis Volleyball: 1 posts
+- soil monsoon rains Petrichor: 1 posts
+- beach clean sands Thiruvanmiyur Chennai: 1 posts
+- corporation: 1 posts
+- gooseberry: 1 posts
+- 3G BWA spectrum auction: 1 posts
+- 3G India: 1 posts
+- 3G mobile services India: 1 posts
+- Party: 1 posts
+- Sam: 1 posts
+- Wimbledon F1: 1 posts
+- mango: 1 posts
+- Chennai: 1 posts
+- Thiruvanmiyur beach summer: 1 posts
+- tech_trends: 1 posts
+- ultrabook: 1 posts
+- VoLTE: 1 posts
+- NSS: 1 posts
+- one liners: 1 posts
+- quotes: 1 posts
+- Thrissur: 1 posts
+- sugar: 1 posts
+- ABBA: 1 posts
+- Vishu Kani: 1 posts
+- Shantanu: 1 posts
+- bitcoin: 1 posts
+- crypto: 1 posts
+- sportswear: 1 posts
+- admission: 1 posts
+- college: 1 posts
+- FCC: 1 posts
+- specturm: 1 posts
+- White space: 1 posts
+- White space spectrum: 1 posts
+
+Categories:
+- 3G
+- 3G BWA spectrum auction
+- 3G India
+- 3G Mobile Services
+- 3G mobile services India
+- 3g-mobile-services
+- ABBA
+- Access Point
+- Ai CHATGPT
+- Airtel
+- Android YouTube video
+- BSNL
+- BSNL Broadband
+- BSNL Broadband issues
+- Bharti
+- Bitter gourd
+- Broadband
+- COVID
+- CS Puram
+- Centrino laptop
+- Chennai
+- Coffee Chicory
+- Dataone
+- FCC
+- Fitbit charge5
+- Flea market
+- HSPA
+- Home wireless network
+- ISRO Space Rocketry
+- India Broadband
+- India Internet
+- India Internet data
+- India mobile and internet statistics
+- India mobile data
+- India mobile statistics
+- India telecom statistics mobile landline
+- Kerala
+- Lifestyle
+- MTNL
+- Mobile internet India
+- Music
+- NSS
+- Native
+- Palakkad
+- Party
+- Sam
+- Secure Wireless network
+- Shantanu
+- SriBagavath Spritual introspection
+- Thiruvanmiyur beach summer
+- Thrissur
+- Uncategorized
+- Vishu Kani
+- VoLTE
+- WPA
+- White space
+- White space spectrum
+- Wi-Fi
+- WiFi
+- Wimbledon F1
+- Wireless Internet
+- Wireless Router
+- activity
+- admission
+- analytics
+- android
+- android-youtube-video
+- apps
+- beach clean sands Thiruvanmiyur Chennai
+- bitcoin
+- bsnl-broadband
+- chennai
+- college
+- corporation
+- crypto
+- customize youtube start end times
+- debugging
+- desktop browser
+- downtown
+- drink
+- environment
+- express
+- farming
+- feedback
+- festival
+- fitness
+- flower badminton
+- food
+- fruits
+- gooseberry
+- gym shaker cocoa
+- health
+- hibiscus flower
+- hyperlapse gondola
+- iPad
+- india internet statistics
+- india-internet
+- india-mobile-and-internet-statistics
+- iphone 3gs
+- javascript
+- kerala
+- kindle
+- mango
+- mango tree
+- mobile data plans
+- movies
+- music
+- nature
+- neem flower
+- neem tree
+- nutrition
+- one liners
+- party
+- peanut tennis Volleyball
+- quiet
+- quiz tennis
+- quotes
+- science
+- shopping
+- soil
+- soil monsoon rains Petrichor
+- specturm
+- sports
+- sports table tennis CATTA
+- sportswear
+- spring
+- sugar
+- summer
+- tablets
+- tech trends
+- tech-trends
+- tech_trends
+- tennis
+- tennis coach dad teenagers
+- tennis sports
+- teracom
+- the hindu
+- thirussur
+- travels
+- type 2 modem
+- ultrabook
+- uncategorized
+- video url editing
+- wearable
+- web development
+- web-development
+- week
+- white-space-spectrum
+- wireless-internet
+- zen
+
+Tags:
+- 3g
+- 3g-bwa-spectrum-auction
+- 3g-india
+- 3g-mobile-services
+- 3g-mobile-services-india
+- abba
+- access-point
+- admission
+- ai-chatgpt
+- airtel
+- android
+- android-youtube-video
+- apps
+- beach-clean-sands-thiruvanmiyur-chennai
+- beach-cleaning-environment-chennai-corporation
+- bharti
+- bitcoin
+- bitter-gourd
+- broadband
+- bsnl
+- bsnl-broadband
+- bsnl-broadband-issues
+- centrino-laptop
+- chennai
+- coffee-chicory
+- college
+- corporation
+- covid
+- crypto
+- cs-puram
+- customize-youtube-start-end-times
+- dataone
+- desktop-browser
+- drink
+- eleventy
+- environment
+- farming
+- fcc
+- festival
+- fitbit-charge5
+- fitness
+- flea-market
+- flower-badminton
+- food
+- fruits
+- gooseberry
+- gym-shaker-cocoa
+- health
+- hibiscus-flower
+- home-wireless-network
+- hspa
+- hyperlapse-gondola
+- india-broadband
+- india-internet
+- india-internet-data
+- india-internet-statistics
+- india-mobile-and-internet-statistics
+- india-mobile-data
+- india-mobile-statistics
+- india-telecom-statistics-mobile-landline
+- ipad
+- iphone-3gs
+- isro-space-rocketry
+- javascript
+- kerala
+- kindle
+- lifestyle
+- mango
+- mango-tree
+- migration
+- mobile-data-plans
+- mobile-internet-india
+- movies
+- mtnl
+- music
+- native
+- nature
+- neem-flower
+- neem-tree
+- nss
+- nutrition
+- one-liners
+- palakkad
+- party
+- peanut-tennis-volleyball
+- post
+- quiet
+- quiz-tennis
+- quotes
+- sam
+- science
+- secure-wireless-network
+- shantanu
+- shopping
+- soil
+- soil-monsoon-rains-petrichor
+- specturm
+- sports
+- sports-table-tennis-catta
+- sportswear
+- spring
+- sribagavath-spritual-introspection
+- sugar
+- summer
+- tablets
+- tech-trends
+- tech_trends
+- tennis
+- tennis-coach-dad-teenagers
+- tennis-sports
+- teracom
+- thirussur
+- thiruvanmiyur-beach-summer
+- thrissur
+- travels
+- type-2-modem
+- ultrabook
+- uncategorized
+- video-url-editing
+- vishu-kani
+- volte
+- web-development
+- white-space
+- white-space-spectrum
+- wi-fi
+- wifi
+- wimbledon-f1
+- wireless-internet
+- wireless-router
+- wordpress
+- wpa
+- zen
