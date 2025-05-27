@@ -52,6 +52,58 @@ img {
   height: auto;
   display: block;
   margin: 1rem auto;
+  border-radius: 4px;
+  aspect-ratio: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* Responsive image containers */
+.image-container {
+  position: relative;
+  width: 100%;
+  margin: 1rem 0;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+/* Lazy loading placeholder */
+img.lazy {
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+}
+
+img.lazy.loaded {
+  opacity: 1;
+}
+
+/* Mobile-specific image adjustments */
+@media (max-width: 768px) {
+  img {
+    margin: 0.75rem auto;
+  }
+  
+  .image-container {
+    margin: 0.75rem 0;
+  }
+  
+  /* Adjust image sizes for mobile */
+  .post-content img {
+    max-width: 100%;
+    height: auto;
+    margin: 0.75rem 0;
+  }
+  
+  /* Ensure images don't overflow on mobile */
+  .post-content {
+    overflow-x: hidden;
+  }
 }
 
 /* Navigation responsiveness */
