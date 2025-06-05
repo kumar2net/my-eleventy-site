@@ -70,6 +70,7 @@ module.exports = function(eleventyConfig) {
 
     // Reading time filter
     eleventyConfig.addFilter("readingTime", text => {
+        if (!text || typeof text !== "string") return 0;
         const stats = readingTime(text);
         return Math.ceil(stats.minutes);
     });
