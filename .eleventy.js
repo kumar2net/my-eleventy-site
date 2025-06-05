@@ -76,6 +76,7 @@ module.exports = function(eleventyConfig) {
 
     // Get collection items by tag
     eleventyConfig.addFilter("filterByTag", (posts, tag) => {
+        if (!Array.isArray(posts)) return [];
         return posts.filter(post => post.data.tags && post.data.tags.includes(tag));
     });
 

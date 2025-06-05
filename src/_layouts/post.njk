@@ -44,7 +44,7 @@
     <footer class="post-footer">
         <h2>Related Posts</h2>
         <div class="related-posts">
-            {% set relatedPosts = collections.posts | filterByTag(tags[0]) | reverse %}
+            {% set relatedPosts = collections.post | filterByTag(tags[0]) | reverse %}
             {% for post in relatedPosts | slice(3) %}
                 {% if post.url != page.url %}
                 <div class="related-post">
